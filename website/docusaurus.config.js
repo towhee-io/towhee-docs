@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Towhee docs website',
+  title: 'Towhee Docs',
   tagline: '',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
@@ -38,20 +38,20 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Towhee docs website',
+        title: '',
         logo: {
           alt: 'Towhee logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
+          // {
+          //   type: 'doc',
+          //   docId: 'quick_start',
+          //   position: 'left',
+          //   label: 'quick start',
+          // },
           {
-            type: 'doc',
-            docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/towhee-io/towhee',
             label: 'GitHub',
             position: 'right',
           },
@@ -64,8 +64,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Quick Start',
+                to: '/docs/quick_start',
               },
             ],
           },
@@ -73,16 +73,12 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
+                label: 'Slack',
+                href: 'https://slack.towhee.io',
               },
               {
                 label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
+                href: 'https://twitter.com/towheeio',
               },
             ],
           },
@@ -91,12 +87,12 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                href: 'https://github.com/towhee-io/towhee',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Towhee docs website, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Towhee, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
