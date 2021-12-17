@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+sidebar_label: Reverse Image Search For Demo
 ---
 
-# Reverse image search for demo
+# Reverse Image Search For Demo
