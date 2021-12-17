@@ -2,7 +2,6 @@ import React from 'react';
 
 
 const katacodaShellBlock = props => {
-  console.log('---- props', props)
   const {children} = props
 
   return (
