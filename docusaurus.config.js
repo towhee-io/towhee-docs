@@ -42,6 +42,7 @@ const config = {
         logo: {
           alt: 'Towhee logo',
           src: 'img/logo.png',
+          href: '/docs/quick_start'
         },
         items: [
           // {
