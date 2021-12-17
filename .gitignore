@@ -4,4 +4,4 @@ node_modules
 .nvmrc
 .docusaurus
 
-website/build/
+build/

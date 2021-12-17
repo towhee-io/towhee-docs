@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Towhee Docs',
   tagline: '',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://docs.towhee.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
