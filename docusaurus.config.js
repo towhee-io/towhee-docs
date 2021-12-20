@@ -25,7 +25,8 @@ const config = {
           path: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/towhee-io/towhee-docs',
+
+          editUrl: 'https://github.com/towhee-io/towhee-docs/blob/main',
           routeBasePath: '/'
         },
         theme: {
