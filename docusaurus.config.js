@@ -26,6 +26,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/towhee-io/towhee-docs',
+          routeBasePath: '/'
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -46,12 +47,12 @@ const config = {
         logo: {
           alt: 'Towhee logo',
           src: 'img/logo.png',
-          href: '/docs/quick_start'
+          href: '/'
         },
         items: [
           // {
           //   type: 'doc',
-          //   docId: 'quick_start',
+          //   docId: '/',
           //   position: 'left',
           //   label: 'quick start',
           // },
@@ -70,7 +71,7 @@ const config = {
             items: [
               {
                 label: 'Quick Start',
-                to: '/docs/quick_start',
+                to: '/',
               },
             ],
           },
