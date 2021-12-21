@@ -1,0 +1,60 @@
+name: Publish
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Checkout Github Action'
+        uses: actions/checkout@master
+        with:
+          ref: 'main'
+
+      - name: Install OpenVPN and kubectl
+        run: |
+          sudo apt-get update
+          sudo apt-get install openvpn -y
+          sudo apt-get install -y apt-transport-https ca-certificates curl
+          sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+          echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+          sudo apt-get update
+          sudo apt-get install kubectl -y
+
+      - name: Connect VPN
+        uses: golfzaptw/action-connect-ovpn@master
+        id: connect_vpn
+        with:
+          FILE_OVPN: '.github/workflows/client.ovpn'
+        env:
+          CA_CRT: ${{ secrets.VPN_CA}}
+          USER_CRT: ${{ secrets.VPN_CRT }}
+          USER_KEY: ${{ secrets.VPN_KEY }}
+
+      - uses: azure/docker-login@v1
+        with:
+          login-server: harbor-us1.zilliz.cc
+          username: ${{ secrets.HARBOR_USERNAME}}
+          password: ${{ secrets.HARBOR_PASSWORD}}
+
+      - name: Generate docker image tag name
+        id: generate-tag-name
+        run: |
+          export tag=${{ github.sha }}-$GITHUB_RUN_NUMBER
+          echo $tag
+          echo "::set-output name=docker_tag::$tag"
+
+      - name: Build and push image to Harbor
+        id: build-image
+        run: |
+          docker build "$GITHUB_WORKSPACE/" -f "Dockerfile" -t harbor-us1.zilliz.cc/towhee/towhee-docs:${{ steps.generate-tag-name.outputs.docker_tag }}
+          docker push harbor-us1.zilliz.cc/towhee/towhee-docs:${{ steps.generate-tag-name.outputs.docker_tag }}
+
+      - name: Deploy to cluster
+        run: |
+          echo ${{ secrets.kubeconfig }} > config64
+          base64 -d config64 > kubeconfig
+          kubectl set image deployment/towhee-docs towhee-docs=harbor-us1.zilliz.cc/towhee/towhee-docs:${{ steps.generate-tag-name.outputs.docker_tag }} -n towhee --kubeconfig=kubeconfig
