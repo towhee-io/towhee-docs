@@ -104,6 +104,10 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      // hide dark mode
+      colorMode: {
+        disableSwitch: true,
+      }
     }),
 };
 

@@ -1,6 +1,6 @@
 ---
-sidebar_position: 1
-sidebar_label: Image Deduplication 
+id: image-deduplication
+title: Image Deduplication
 ---
 
 # Image Deduplication

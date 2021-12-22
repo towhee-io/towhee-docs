@@ -1,6 +1,6 @@
 ---
-sidebar_position: 2
-sidebar_label: Music Recognition System
+id: music-recognition-system
+title: Music Recognition System
 ---
 
 # Music Recognition System

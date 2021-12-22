@@ -1,6 +1,6 @@
 ---
-sidebar_position: 3
-sidebar_label: Reverse Image Search
+id: reverse-image-search
+title: Reverse Image Search
 ---
 
 # Reverse Image Search
