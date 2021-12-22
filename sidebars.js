@@ -19,70 +19,57 @@ const sidebars = {
   // But you can create a sidebar manually
 
   doc: [
+    { Introduction: ['introduction/towhee-philosophy'] },
     {
-      type: 'category',
-      label: 'Introduction',
-      items: ['introduction/towhee-philosophy'],
-    }, {
-      type: 'category',
-      label: 'Getting started',
-      items: ['get-started/install', 'get-started/first-pipeline']
-    }, {
-      type: 'category',
-      label: 'Scenarios',
-      items: [
+      'Getting started': ['get-started/install', 'get-started/first-pipeline'],
+    },
+    {
+      Scenarios: [
         'scenarios/image-deduplication',
         'scenarios/music-recognition-system',
-        'scenarios/reverse-image-search'
-      ]
-    }, {
-      type: 'category',
-      label: 'Supported pipelines',
-      items: [
+        'scenarios/reverse-image-search',
+      ],
+    },
+    {
+      'Supported pipelines': [
         'pipelines/image-embedding',
-        'pipelines/music-embedding'
-      ]
-    }, {
-      type: 'category',
-      label: 'Supported operators',
-      items: [
+        'pipelines/music-embedding',
+      ],
+    },
+    {
+      'Supported operators': [
         'operators/image-loading-and-transforms',
-        'operators/model-based-operators'
-      ]
-    }, {
-      type: 'category',
-      label: 'Dive deep',
-      items: [
+        'operators/model-based-operators',
+      ],
+    },
+    {
+      'Dive deep': [
         'dive-deep/pipeline-config',
         'dive-deep/hub-integration-and-caching',
         'dive-deep/frequent-errors',
-        'dive-deep/contributing-guide'
-      ]
-    }, {
-      type: 'category',
-      label: 'Develop',
-      items: [{
-        type: 'category',
-        label: 'Framework',
-        items: [
-          'develop/framework/architectural-overview',
-          'develop/framework/DAG-details',
-          'develop/framework/engine-details'
-        ]
-      }, {
-        type: 'category',
-        label: 'Layer',
-        items: [
-          'develop/layer/layer-introduction',
-          'develop/layer/layer-details'
-        ]
-      },
-      'develop/image-ensemble-training',
-      'develop/roadmap'
-      ]
-    }
+        'dive-deep/contributing-guide',
+      ],
+    },
+    {
+      Develop: [
+        {
+          Framework: [
+            'develop/framework/architectural-overview',
+            'develop/framework/DAG-details',
+            'develop/framework/engine-details',
+          ],
+        },
+        {
+          Layer: [
+            'develop/layer/layer-introduction',
+            'develop/layer/layer-details',
+          ],
+        },
+        'develop/image-ensemble-training',
+        'develop/roadmap',
+      ],
+    },
   ],
-
 };
 
 module.exports = sidebars;
