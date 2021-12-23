@@ -18,4 +18,3 @@ title: Architectural overview
 > The `DataFrame` is the edge in a DAG. It is used to transport the data between operators.
 #### Operator
 > Calculation module of a pipeline. Consume previous dataframe's data, calculate new data, and put it into the next dataframe.
-
