@@ -1,7 +1,6 @@
 ---
 id: community
 title: Community
-slug: /
 ---
 
 # Community
