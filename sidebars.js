@@ -19,9 +19,18 @@ const sidebars = {
   // But you can create a sidebar manually
 
   doc: [
-    {Introduction: ['introduction/towhee-philosophy']},
     {
-      'Getting started': ['get-started/install', 'get-started/first-pipeline'],
+      Introduction: [
+        'introduction/towhee-philosophy',
+        'introduction/quick-start',
+        'introduction/community'
+      ]
+    },
+    {
+      'Getting started': [
+        'get-started/install',
+        'get-started/first-pipeline'
+      ],
     },
     {
       Scenarios: [
