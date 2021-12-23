@@ -1,0 +1,13 @@
+filters:
+  ".*":
+    reviewers:
+      - GuoRentong
+      - fzliu
+      - filip-halt
+      - jaelgu
+
+    approvers:
+      - GuoRentong
+      - fzliu
+      - filip-halt
+      - jaelgu
