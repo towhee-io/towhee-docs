@@ -1,6 +1,7 @@
 ---
 id: philosophy
 title: Our Mission
+slug: /
 ---
 
 # Towhee Introduction
