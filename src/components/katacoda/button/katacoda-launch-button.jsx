@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import { init } from '../katacoda-embed';
-import styles from './button.module.css'
+import React, {useEffect} from 'react';
+import {init} from '../katacoda-embed';
+import styles from './button.module.css';
 
 const KatacodaBtn = () => {
   const handleBtnClick = () => {
@@ -20,9 +20,10 @@ const KatacodaBtn = () => {
         // data-katacoda-port="30000"
         data-katacoda-env="ubuntu"
         // data-katacoda-command="start.sh"
-        data-katacoda-ui="panel"
-      ></div>
-      <button className={styles.button} onClick={handleBtnClick}>Launch Terminal</button>
+        data-katacoda-ui="panel"></div>
+      <button className={styles.button} onClick={handleBtnClick}>
+        Launch Terminal
+      </button>
     </>
   );
 };

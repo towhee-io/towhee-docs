@@ -7,17 +7,17 @@ title: Reverse Image Search
 
 ## Overview
 
-**Reverse image search** helps you search for similar or related images using an input photo. Reverse image search is a [content-based image retrieval](https://en.wikipedia.org/wiki/Content-based_image_retrieval) (CBIR) query technique that involves providing the CBIR system with a sample image that it will then base its search upon.[1] Unlike the traditional image search that relies on labels to do the query, the reverse image search is based on the content of the image itself. 
+**Reverse image search** helps you search for similar or related images using an input photo. Reverse image search is a [content-based image retrieval](https://en.wikipedia.org/wiki/Content-based_image_retrieval) (CBIR) query technique that involves providing the CBIR system with a sample image that it will then base its search upon.[1] Unlike the traditional image search that relies on labels to do the query, the reverse image search is based on the content of the image itself.
 
-The applications of reverse image search include **finding the original source of an image**, **searching for similar materials, product search and recommendation.** 
+The applications of reverse image search include **finding the original source of an image**, **searching for similar materials, product search and recommendation.**
 
 - **Find the source**
 
-Search for the exact same image, often to find the original source of the image, or a low-resolution thumbnail. 
+Search for the exact same image, often to find the original source of the image, or a low-resolution thumbnail.
 
 - **Get the similar image**
 
-Find similar pictures based on the photos taken, helping designers and staff find similar works faster and more efficiently. 
+Find similar pictures based on the photos taken, helping designers and staff find similar works faster and more efficiently.
 
 - **Product recommendation**
 
@@ -25,9 +25,9 @@ Search for product images taken by users on the e-commerce platform to find the 
 
 These reverse image search applications are the most common in various fields, but how to analyze images efficiently and accurately still has questions. Are the searched image results satisfactory? Is search efficient when it has a large amount of data? Or is there a unified plan for these applications? What technology is needed to achieve it?
 
-## Key Technologies 
+## Key Technologies
 
-With the quick development of AI technology, there are more and more methods to processing unstructured data, and the reverse image search application above can be realized with AI models. Before processing with the models, the image data needs to be pre-processed or transformed. And in the scenarios of reverser image search, model is usually used to extract image feature vectors, and after getting the feature vectors, we can store it and query with vector database. 
+With the quick development of AI technology, there are more and more methods to processing unstructured data, and the reverse image search application above can be realized with AI models. Before processing with the models, the image data needs to be pre-processed or transformed. And in the scenarios of reverser image search, model is usually used to extract image feature vectors, and after getting the feature vectors, we can store it and query with vector database.
 
 - **Image Transformation**
 
