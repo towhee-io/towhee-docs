@@ -1,40 +1,40 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Towhee Docs',
-  tagline: '',
-  url: 'https://docs.towhee.io',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'Towhee', // Usually your GitHub org/user name.
-  projectName: 'towhee-docs', // Usually your repo name.
+  title: "Towhee Docs",
+  tagline: "",
+  url: "https://docs.towhee.io",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
+  organizationName: "Towhee", // Usually your GitHub org/user name.
+  projectName: "towhee-docs", // Usually your repo name.
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          path: 'docs',
-          sidebarPath: require.resolve('./sidebars.js'),
+          path: "docs",
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl: 'https://github.com/towhee-io/towhee-docs/blob/main',
-          routeBasePath: '/'
+          editUrl: "https://github.com/towhee-io/towhee-docs/blob/main",
+          routeBasePath: "/",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
         gtag: {
-          trackingID: 'G-0JXY6PQLWQ',
-          anonymizeIP: true
-        }
+          trackingID: "G-0JXY6PQLWQ",
+          anonymizeIP: true,
+        },
       }),
     ],
   ],
@@ -43,11 +43,11 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: '',
+        title: "",
         logo: {
-          alt: 'Towhee logo',
-          src: 'img/logo.png',
-          href: '/'
+          alt: "Towhee logo",
+          src: "img/logo.png",
+          href: "/",
         },
         items: [
           // {
@@ -57,48 +57,48 @@ const config = {
           //   label: 'quick start',
           // },
           {
-            href: 'https://github.com/towhee-io/towhee',
-            label: 'GitHub',
-            position: 'right',
+            href: "https://github.com/towhee-io/towhee",
+            label: "GitHub",
+            position: "right",
           },
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
-                label: 'Quick Start',
-                to: '/',
+                label: "Quick Start",
+                to: "/",
               },
             ],
           },
           {
-            title: 'Community',
+            title: "Community",
             items: [
               {
-                label: 'Slack',
-                href: 'https://slack.towhee.io',
+                label: "Slack",
+                href: "https://slack.towhee.io",
               },
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/towheeio',
+                label: "Twitter",
+                href: "https://twitter.com/towheeio",
               },
             ],
           },
           {
-            title: 'More',
+            title: "More",
             items: [
               {
-                label: 'GitHub',
-                href: 'https://github.com/towhee-io/towhee',
+                label: "GitHub",
+                href: "https://github.com/towhee-io/towhee",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Towhee, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Zilliz. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
@@ -107,7 +107,7 @@ const config = {
       // hide dark mode
       colorMode: {
         disableSwitch: true,
-      }
+      },
     }),
 };
 

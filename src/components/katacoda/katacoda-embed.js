@@ -84,13 +84,13 @@ export const init = function () {
           if (iframe) {
             var host = getSourceHost(currentScript);
             iframe.contentWindow.postMessage(
-              { cmd: 'host', data: { host: window.location.host } },
-              window.location.protocol + '//' + host
+              {cmd: 'host', data: {host: window.location.host}},
+              window.location.protocol + '//' + host,
             );
           }
         }
       },
-      false
+      false,
     );
     if (document.addEventListener) {
       document.addEventListener('webkitfullscreenchange', exitHandler, false);
@@ -252,12 +252,12 @@ export const init = function () {
       document.documentElement.addEventListener(
         'mousemove',
         element.doDrag,
-        false
+        false,
       );
       document.documentElement.addEventListener(
         'mouseup',
         element.stopDrag,
-        false
+        false,
       );
     };
     element.doDrag = function (e) {
@@ -271,12 +271,12 @@ export const init = function () {
       document.documentElement.removeEventListener(
         'mousemove',
         element.doDrag,
-        false
+        false,
       );
       document.documentElement.removeEventListener(
         'mouseup',
         element.stopDrag,
-        false
+        false,
       );
     };
   }
@@ -301,7 +301,7 @@ export const init = function () {
         e.shiftKey,
         e.metaKey,
         e.button,
-        null
+        null,
       );
       iframe.dispatchEvent(evt);
     };
@@ -358,8 +358,8 @@ export const init = function () {
     var host = getSourceHost(currentScript);
 
     iframe.contentWindow.postMessage(
-      { cmd: 'writeTerm', data: cmd },
-      window.location.protocol + '//' + host
+      {cmd: 'writeTerm', data: cmd},
+      window.location.protocol + '//' + host,
     );
   };
   var writeToTerminal = function (cmd) {
@@ -375,8 +375,8 @@ export const init = function () {
     if (!iframe) return;
     var host = getSourceHost(currentScript);
     iframe.contentWindow.postMessage(
-      { cmd: 'writeTerm', data: cmd },
-      window.location.protocol + '//' + host
+      {cmd: 'writeTerm', data: cmd},
+      window.location.protocol + '//' + host,
     );
   };
   var writeToEnvironment = function (cmd) {
@@ -392,8 +392,8 @@ export const init = function () {
     if (!iframe) return;
     var host = getSourceHost(currentScript);
     iframe.contentWindow.postMessage(
-      { cmd: 'writeToEnvironment', data: cmd },
-      window.location.protocol + '//' + host
+      {cmd: 'writeToEnvironment', data: cmd},
+      window.location.protocol + '//' + host,
     );
   };
   var eraseCookie = function (name) {
@@ -493,7 +493,7 @@ export const init = function () {
         '/api/embed/nonce?protocol=' +
         window.location.protocol +
         '&host=' +
-        window.location.host
+        window.location.host,
     );
     oReq.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
     oReq.send();
@@ -516,7 +516,7 @@ export const init = function () {
         '/logout?protocol=' +
         window.location.protocol +
         '&host=' +
-        window.location.host
+        window.location.host,
     );
     oReq.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
     oReq.send();

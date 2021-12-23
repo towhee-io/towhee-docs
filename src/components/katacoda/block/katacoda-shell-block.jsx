@@ -1,8 +1,7 @@
 import React from 'react';
 
-
-const katacodaShellBlock = props => {
-  const {children} = props
+const katacodaShellBlock = (props) => {
+  const {children} = props;
 
   return (
     <div>
@@ -10,7 +9,7 @@ const katacodaShellBlock = props => {
         {children}
       </code>
     </div>
-  )
+  );
 };
 
 export default katacodaShellBlock;
