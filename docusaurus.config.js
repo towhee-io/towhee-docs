@@ -47,7 +47,7 @@ const config = {
         logo: {
           alt: "Towhee logo",
           src: "img/logo.png",
-          href: "https://hub.towhee.io/",
+          href: "/",
         },
         items: [
           // {
