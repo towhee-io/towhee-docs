@@ -15,7 +15,7 @@ The Towhee community maintains a list of [Good First Issues](https://github.com/
 
 ### Sharing a new operator or pipeline
 
-Pipeline and operator contributions to our Towhee Hub are just as valued as artwork, code, and documentation contributions. If you have a new model, useful script, or an `x2vec` pipeline that you'd like to share with the Towhee community, [get in touch](towhee-team@zilliz.com) with us!
+Pipeline and operator contributions to our Towhee Hub are just as valued as artwork, code, and documentation contributions. If you have a new model, useful script, or an `x2vec` pipeline that you'd like to share with the Towhee community, get in touch with us on Slack!
 
 ### Submitting a new issue or feature request
 
