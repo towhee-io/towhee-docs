@@ -1,5 +1,5 @@
 ---
-id: towhee-philosophy
+id: philosophy
 title: Our Mission
 slug: /
 ---

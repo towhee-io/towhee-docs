@@ -21,7 +21,7 @@ const sidebars = {
   doc: [
     {
       Introduction: [
-        'introduction/towhee-philosophy',
+        'introduction/philosophy',
         'introduction/quick-start',
         'introduction/community'
       ]
