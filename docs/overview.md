@@ -59,27 +59,16 @@ Towhee is _not_ a library for building neural nets (a-la Pytorch and Tensorflow)
 - Music Recognition: music identification with full-length song or a snippet
 
 #### Supported Pipelines:
-<<<<<<< HEAD
 
-- Image Embedding Pipelines
-- Audio Embedding Pipelines
-=======
-* [Image Embedding Pipelines](pipelines/image-embedding)
-* [Audio Embedding Pipelines](pipelines/music-embedding)
->>>>>>> 4cefc3f (Updated intro)
+- [Image Embedding Pipelines](pipelines/image-embedding)
+- [Audio Embedding Pipelines](pipelines/music-embedding)
+
 
 #### Supported Operators:
 
 #### Community:
-<<<<<<< HEAD
 
 - Github: https://github.com/towhee-io/towhee
 - Slack: https://slack.towhee.io
 - Twitter: https://twitter.com/towheeio
 - Github: https://github.com/towhee-io/towhee
-=======
-* Github: https://github.com/towhee-io/towhee
-* Slack: https://slack.towhee.io
-* Twitter: https://twitter.com/towheeio
-* Github: https://github.com/towhee-io/towhee
->>>>>>> 4cefc3f (Updated intro)
