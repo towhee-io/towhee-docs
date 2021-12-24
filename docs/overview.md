@@ -45,20 +45,23 @@ Towhee is _not_ a library for building neural nets (a-la Pytorch and Tensorflow)
 ## Where to Go from Here
 
 #### Getting Started:
-* Quick Start: install Towhee and try your first pipeline
+* Quick Start: 
+* Installation:
+* Hello Pipeline:
 
 #### Scenarios:
-* Reverse Image Search: search for similar or related images
-* Image Deduplication: detect and remove identical or near-identical photos
-* Music Recognition: music identification with full-length song or a snippet
+* Reverse Image Search:
+* Image Deduplication:
+* Music Recognition:
 
 #### Supported Pipelines:
-* Image Embedding Pipelines
-* Audio Embedding Pipelines
+* Image Embedding Pipelines:
+* Audio Embedding Pipelines:
 
 #### Supported Operators:
 
 #### Community:
-* Github: https://github.com/towhee-io/towhee
-* Slack: https://slack.towhee.io
-* Twitter: https://twitter.com/towheeio
+* [Github](https://github.com/towhee-io/towhee) - Contributions are always welcome.
+* [Towhee hub](https://hub.towhee.io) - One stop shop for operators and pipelines.
+* [Slack](https://slack.towhee.io) - Drop by and say hello!
+* [Twitter](https://twitter.com/towheeio) - Follow us for the latest Towhee news.
