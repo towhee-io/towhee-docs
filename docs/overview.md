@@ -27,7 +27,7 @@ To accomplish this, we built Towhee atop popular machine learning and unstructur
 
     Towhee solves this by packaging model training, testing, and deployments in a single package. Any of our embedding generation pipelines can be deployed either on a laptop, across a multi-GPU server\*, or in a cluster of machines in just a couple lines of code\*.
 
-\*These features are coming in a future version of Towhee.
+\*_These features are coming in a future version of Towhee._
 
 ## Design philosophy
 

@@ -29,7 +29,7 @@ const sidebars = {
     {
       Scenarios: [
         'scenarios/image-deduplication',
-        'scenarios/music-recognition-system',
+        'scenarios/music-recognition',
         'scenarios/reverse-image-search',
       ],
     },
