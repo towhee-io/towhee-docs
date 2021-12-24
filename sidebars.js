@@ -19,7 +19,7 @@ const sidebars = {
   // But you can create a sidebar manually
 
   doc: [
-    'overflow',
+    'overview',
     {
       'Getting started': ['introduction/quick-start'],
     },
