@@ -49,7 +49,7 @@ As mentioned in the key technology section, the reverse image search system main
 2. Extract the feature vector of image through AI model.
 3. Store the vector of the image in the vector database, then search for similar results.
 
-![img](../../static/img/reverse_image_search.png)
+![img](reverse_image_search.png)
 
 As shown in the figure above, the first two steps can be achieved by [Towhee](http://towhee.io)[2]. **Towhee is an open source deep learning platform** that can help process various unstructured data, such as images, audio, video, etc., while integrating a variety of image processing models, such as image feature extraction, image classification, target detection, etc. The image embedding pipeline in the figure is based on the ResNet50 model. Of course, the model in Pipeline can also be customized by users.
 

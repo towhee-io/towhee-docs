@@ -9,9 +9,8 @@ title: Music Recognition
 
 A music recognition system automatically identifies the unknown sound. It matches input audios with songs in the database. Compared to the traditional methodology using Wavelets, the use of deep learning saves resources and speeds up querying.
 
-<p align="center">
-  <img height="250" src="../../static/img/music_intro.png" />
-</p>
+![image1](music_intro.png)
+
 ## Key Technologies
 
 **Audio Preprocessing**
@@ -30,9 +29,7 @@ The system requires a proper database to store and retrieve vectors. Especially 
 
 A music recognition system generally transforms audio data to embeddings and compares similarity based on distances between embeddings. Therefore, an encoder converting audio to embedding and a database for vector storage and retrieval are main components.
 
-<p align="center">
-  <img height="450" src="../../static/img/music_system.png" />
-</p>
+![image2](music_system.png)
 
 **Towhee**
 
