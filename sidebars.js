@@ -24,7 +24,6 @@ const sidebars = {
     },
     {
       Introduction: [
-        'introduction/what-is-towhee',
         'introduction/quick-start',
         'introduction/community'
       ]
