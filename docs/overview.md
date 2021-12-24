@@ -5,7 +5,7 @@ sidebar_label: Overview
 slug: /
 ---
 
-# Towhee Overview
+# Towhee overview
 
 ## What is Towhee?
 
@@ -37,25 +37,25 @@ To accomplish this, we built Towhee atop popular machine learning and unstructur
 
 - **Application-oriented**: Instead of being "just another model hub", we provide full end-to-end embedding pipelines. Each pipeline can make use of any number of machine learning models or Python functions in a variety of configurations - ensembles, flows, or any combination thereof.
 
-## Where to Go from Here
+## Where to go from here
 
-#### Getting Started:
+#### Getting started:
 
 - [Quick Start](get-started/quick-start): install Towhee and try your first pipeline
 
 #### Scenarios:
 
-- [Reverse Image Search](scenarios/reverse-image-search): search for similar or related images
-- [Image Deduplication](scenarios/image-deduplication): detect and remove identical or near-identical photos
-- [Music Recognition](scenarios/music-recognition): music identification with full-length song or a snippet
+- [Reverse image search](scenarios/reverse-image-search): search for similar or related images
+- [Image deduplication](scenarios/image-deduplication): detect and remove identical or near-identical photos
+- [Music recognition](scenarios/music-recognition-system): music identification with full-length song or a snippet
 
-#### Supported Pipelines:
+#### Supported pipelines:
 
-- [Image Embedding Pipelines](pipelines/image-embedding)
-- [Audio Embedding Pipelines](pipelines/music-embedding)
+- [Image embedding pipelines](pipelines/image-embedding)
+- [Audio embedding pipelines](pipelines/music-embedding)
 
 
-#### Supported Operators:
+#### Supported operators:
 
 #### Community:
 

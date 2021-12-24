@@ -3,7 +3,7 @@ id: reverse-image-search
 title: Reverse Image Search
 ---
 
-# Reverse Image Search
+# Reverse image search
 
 ## Overview
 
@@ -25,15 +25,15 @@ Search for product images taken by users on the e-commerce platform to find the 
 
 These reverse image search applications are the most common in various fields, but how to analyze images efficiently and accurately still has questions. Are the searched image results satisfactory? Is search efficient when it has a large amount of data? Or is there a unified plan for these applications? What technology is needed to achieve it?
 
-## Key Technologies
+## Key technologies
 
 With the quick development of AI technology, there are more and more methods to processing unstructured data, and the reverse image search application above can be realized with AI models. Before processing with the models, the image data needs to be pre-processed or transformed. And in the scenarios of reverser image search, model is usually used to extract image feature vectors, and after getting the feature vectors, we can store it and query with vector database.
 
-- **Image Transformation**
+- **Image transformation**
 
 It's very important to do image data pre-processing and transform, including cropping, normalization, data enhancement, data convention(convert image data into a uniform data format, such as PIL.Image,tensor) etc. It will archive better image analysis after image transformation.
 
-- **Embedding Models**
+- **Embedding models**
 
 Models are used to extract feature vectors of images, which is the most critical technique in CBIR systems. The vector of image may be visual features such as color, texture, shape, or spatial relationships. And the models are usually trained with deep neural networks on a large number of datasets, and it can gratefully represent the information of image.
 

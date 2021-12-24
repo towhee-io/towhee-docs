@@ -3,7 +3,7 @@ id: music-recognition
 title: Music Recognition
 ---
 
-# Music Recognition
+# Music recognition system
 
 ## Overview
 
