@@ -20,8 +20,10 @@ const sidebars = {
 
   doc: [
     {
+      Overview: 'overview'
+    },
+    {
       Introduction: [
-        'introduction/philosophy',
         'introduction/quick-start',
         'introduction/community'
       ]

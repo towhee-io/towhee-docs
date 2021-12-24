@@ -1,16 +1,17 @@
 ---
-id: philosophy
-title: Our Mission
+id: overview
+title: Overview
 slug: /
 ---
 
-# Towhee Introduction
+# Towhee Overview
 
 ## What is Towhee?
 
 Towhee is a flexible, application-oriented framework for computing embedding vectors over unstructured data. It aims to make democratize `anything2vec`, allowing everyone - from beginner developers to large organizations - to train and deploy complex machine learning pipelines with just a few lines of code.
 
-To accomplish this, we built Towhee atop Pytorch, Tensorflow, and scikit-learn. Machine learning models can be mixed and matched, i.e. a single pipeline can include models from all three libraries in addition to some user-defined scripts. To ensure user-friendliness, pipelines can be called in just a single line of code, without needing to understand the underlying models or modules used to build it. For more information, take a look at our quick start page.
+To accomplish this, we built Towhee atop popular machine learning and unstructured data processing libraries, i.e. Pytorch, scikit-learn, OpenCV. Models or functions from different libraries are wrapped as standard Towhee operators, and can be integrated freely into
+application-oriented pipelines. To ensure user-friendliness, pipelines can be called in just a single line of code, without needing to understand the underlying models or modules used to build it. For more information, take a look at our quick start page.
 
 ## Problems Towhee solves
 
@@ -20,7 +21,8 @@ Towhee solves this by treating embedding vectors as first class citizens - embed
 
 2) Too many model implementations exist: Machine learning models (NN-based and traditional) are ubiquitous. Different implementations of machine learning models requires different auxiliary code to support testing and fine-tuning, making model evaluation and productionization a tedious task.
 
-Towhee solves this by providing a universal `Operator` wrapper for all models. Operators have a pre-defined API and glue logic to make Towhee work with both Pytorch and Tensorflow.
+Towhee solves this by providing a universal `Operator` wrapper for all models. Operators have a pre-defined API and glue logic to make Towhee work with diverse machine learning and 
+data processing libraries.
 
 3) MLOps is easier said than done: Due to the continuous inflow of new training data, many DevOps teams now have a dedicated MLOps subteam to enable automated testing and productionization of machine learning models. The constant architectural updates to SotA deep learning models also creates significant overhead when deploying new said models in production environments.
 
@@ -40,11 +42,25 @@ Towhee was created with a few key design concepts in mind. We differentiate ours
 
 Towhee is _not_ a library for building neural nets (a-la Pytorch and Tensorflow) or doing automatic differentiation. We will be providing a training API soon, but it is intended to use either Pytorch, Tensorflow, or scikit-learn as the underlying engine.
 
-## How do I get started?
+## Where to Go from Here
 
-The best way to get started with Towhee is to install and use it. Our next section covers the steps needed to run your first Towhee pipeline.
+#### Getting Started:
+* Quick Start: 
+* Installation:
+* Hello Pipeline:
 
-<!--
-We have plenty of other resources as well:
-- []
--->
+#### Scenarios:
+* Reverse Image Search:
+* Image Deduplication:
+* Music Recognition:
+
+#### Supported Pipelines:
+* Image Embedding Pipelines:
+* Audio Embedding Pipelines:
+
+#### Supported Operators:
+
+#### Community:
+* Github: https://github.com/towhee-io/towhee
+* Slack: 
+* Twitter: 
