@@ -23,15 +23,8 @@ const sidebars = {
       Overview: 'overview'
     },
     {
-      Introduction: [
-        'introduction/quick-start',
-        'introduction/community'
-      ]
-    },
-    {
       'Getting started': [
-        'get-started/install',
-        'get-started/first-pipeline'
+        'introduction/quick-start',
       ],
     },
     {
