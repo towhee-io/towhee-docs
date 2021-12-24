@@ -25,7 +25,7 @@ title: Installation
    For a POSIX system:
    `python3 -m venv /path/to/venv`
 
-   For a Windows syste:
+   For a Windows system:
    `c:\>c:\Python35\python -m venv c:\path\to\venv`
 
    * Start the virtual environment using the command corresponds to your system:
