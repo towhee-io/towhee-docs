@@ -21,15 +21,12 @@ const sidebars = {
   doc: [
     'overview',
     {
-      'Getting started': [
-        'get-started/quick-start',
-        'get-started/install'
-      ],
+      'Getting started': ['get-started/quick-start', 'get-started/install'],
     },
     {
       Scenarios: [
         'scenarios/image-deduplication',
-        'scenarios/music-recognition',
+        'scenarios/music-recognition-system',
         'scenarios/reverse-image-search',
       ],
     },
