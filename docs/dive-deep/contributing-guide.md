@@ -3,7 +3,7 @@ id: contributing-guide
 title: Contributing Guide
 ---
 
-# Contributing Guide
+# Contributing guide
 
 ## Contributing to Towhee
 
