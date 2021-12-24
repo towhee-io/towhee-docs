@@ -19,13 +19,9 @@ const sidebars = {
   // But you can create a sidebar manually
 
   doc: [
+    'overview',
     {
-      Overview: 'overview'
-    },
-    {
-      'Getting started': [
-        'introduction/quick-start',
-      ],
+      'Getting started': ['introduction/quick-start'],
     },
     {
       Scenarios: [
