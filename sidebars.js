@@ -20,8 +20,11 @@ const sidebars = {
 
   doc: [
     {
+      Overview: 'overview'
+    },
+    {
       Introduction: [
-        'introduction/philosophy',
+        'introduction/what-is-towhee',
         'introduction/quick-start',
         'introduction/community'
       ]
