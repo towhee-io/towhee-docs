@@ -3,60 +3,30 @@ id: quick-start
 title: Quick Start
 ---
 
-
 import KatacodaBtn from '../../src/components/katacoda/button/katacoda-launch-button.jsx';
 import KatacodaBlock from '../../src/components/katacoda/block/katacoda-shell-block.jsx'
 
 # Quick Start
 
-## Launch environment
+## Launch terminal
+
+Try Towhee in this page, plase click
 <KatacodaBtn />
 
-## Create a Python Virtual Environment
-
-Although not a necessary step, creating a virtual enviroment is always recommended for libraries that tend to install more packages ontop of themselves. Nobody likes a cluttered python install, so we will quickly go over the steps.
-
-1. Decide on a location to install the virtual enviroment. This location will contain all the files for the virtual enviroment and the venv will be activated from this location. Here are the commands for a POSIX and Windows system:
-   1. <KatacodaBlock>python3 -m venv /path/to/venv</KatacodaBlock>
-
-   2. `c:\>c:\Python35\python -m venv c:\path\to\venv`
-
-2. Start the virtual environment using the command corresponds to your system:
-
-| Platform | Shell | Command to activate virtual environment |
-|---|---|---|
-| Posix | bash/zsh | $ source <path/to/venv>/bin/activate |
-| | fish | $ source <path/to/venv>/bin/activate.fish |
-| | csh/tcsh | $ source <path/to/venv>/bin/activate.csh |
-| | PowerShell Core | $ <path/to/venv>/bin/Activate.ps1 |
-| Windows | cmd.exe | C:\> <path\to\venv>\Scripts\activate.bat |
-| | PowerShell | PS C:\> <path\to\venv>\Scripts\Activate.ps1 |
-
 ## Install Towhee
+`pip install towhee`
+If you want to install Towhee with conda or from source code, see [this page](get-started/install) for more details.
 
-Towhee can be installed in one of two ways, through github and through pip. Lets begin with the easiest route, the pip route.
+## Try your first pipeline
 
-1. Pip
-   1. First, if using a venv, activate it before moving ahead.
-   2. Next, install towhee using the following line: pip install towhee
-   3. That's it!
-2. Github
-   1. First, if using a venv, activate it before moving ahead.
-   2. If not already present, install git on your system.
-   3. Next, clone the towhee repository:
-   `git clone https://github.com/towhee-io/towhee.git`
-   4. After the download is done, proceed into the towhee directory and run the following command:
-   `python setup.py install`
-
-## Run Image Pipeline
-
-For this quick start we are going to use the easy image embedding pipeline. Once this code is run, all necessary files will be downloaded from hub.towhee.io and the embedding results will be given in the output variable.
+For this quick start we are going to use an image embedding pipeline. 
 
 ```python
 # Import pipeline from towhee, pipeline is the main function in towhee.
 from towhee import pipeline
 
-# Initiate the pipeline.
+# Initiate the pipeline. Once the utility `pipeline()` is called, all necessary 
+# `Pipeline` and `Operator` will be automatically downloaded from hub.towhee.io.
 embedding_pipeline = pipeline('image-embedding')
 # Run image through pipeline.
 output = embedding_pipeline('towhee_logo.png')
@@ -64,6 +34,11 @@ output = embedding_pipeline('towhee_logo.png')
 print(output)
 ```
 
-## Conclusion
+## Try more pipelines
 
-And that is it, with this guide you were able to install towhee and run your first pipeline. In the future we will be releasing more guides to help you train your own models, package them into operators, and combine the your operators with other operators to form pipelines. Stay tuned.
+We can try more pipelines by replacing the pipeline name, for example, a image embedding pipeline with ResNet101 encoder can be created via
+```
+embedding_pipeline = pipeline('image-embedding-resnet101')
+```
+A summary of image embedding pipelines can be found at [this page](pipelines/image-embedding).
+In addition, it is highly-recommended to browse the [hub](https://hub.towhee.io/pipelines) for more interesting pipelines.
