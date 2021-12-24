@@ -41,7 +41,9 @@ Towhee is _not_ a library for building neural nets (a-la Pytorch and Tensorflow)
 
 ## How do I get started?
 
-The best way to get started with Towhee is to install and use it. Our next section covers how to the installation process and
+The best way to get started with Towhee is to install and use it. Our next section covers the steps needed to run your first Towhee pipeline.
 
+<!--
 We have plenty of other resources as well:
--
+- []
+-->
