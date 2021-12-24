@@ -15,6 +15,7 @@ To accomplish this, we built Towhee atop popular machine learning and unstructur
 
 ## Problems Towhee solves
 
+<<<<<<< HEAD
 1. Embeddings require model knowledge: Many models are purpose-built to have a fixed output, with less regard for the intermediate layers. A standard `.forward()` or `.predict()` call on a model trained on the ImageNet dataset, for example, is designed to output probabilities for a thousand different classes as opposed to a normalized embedding vector.
 
 Towhee solves this by treating embedding vectors as first class citizens - embedding vector computation is accessible in a single line of code. Model prototyping and cloud deployment\* is also possible within Towhee.
@@ -24,6 +25,22 @@ Towhee solves this by treating embedding vectors as first class citizens - embed
 Towhee solves this by providing a universal `Operator` wrapper for all models. Operators have a pre-defined API and glue logic to make Towhee work with diverse machine learning and data processing libraries.
 
 3. MLOps is easier said than done: Due to the continuous inflow of new training data, many DevOps teams now have a dedicated MLOps subteam to enable automated testing and productionization of machine learning models. The constant architectural updates to SotA deep learning models also creates significant overhead when deploying new said models in production environments.
+=======
+1) One model is not enough: Model-centric libraries and platforms are often not enough for practical applications, especially in computer vision. Computing embedding vectors across all items that appear in a video, for example, requires a combination of multiple models - one for object detection, another for tracking, and another for recognition. At the system-level, this necessitates a platform that supports data parallelism and compute resource management.
+
+Towhee solves this problem by reintroducing the concept of a pipeline as being _data-centric_ instead of _model-centric_. Where model-centric pipelines are composed of a single model followed by auxiliary code, data-centric pipelines treat models as transformations on input data.
+
+2) Embeddings require model knowledge: Many models are purpose-built to have a fixed output, with less regard for the intermediate layers. A standard `.forward()` or `.predict()` call on a model trained on the ImageNet dataset, for example, is designed to output probabilities for a thousand different classes as opposed to a normalized embedding vector.
+
+Towhee solves this by treating embedding vectors as first class citizens - embedding vector computation is accessible in a single line of code. Model prototyping and cloud deployment\* is also possible within Towhee.
+
+3) Too many model implementations exist: Machine learning models (NN-based and traditional) are ubiquitous. Different implementations of machine learning models requires different auxiliary code to support testing and fine-tuning, making model evaluation and productionization a tedious task.
+
+Towhee solves this by providing a universal `Operator` wrapper for all models. Operators have a pre-defined API and glue logic to make Towhee work with diverse machine learning and
+data processing libraries.
+
+4) MLOps is easier said than done: Due to the continuous inflow of new training data, many DevOps teams now have a dedicated MLOps subteam to enable automated testing and productionization of machine learning models. The constant architectural updates to SotA deep learning models also creates significant overhead when deploying new said models in production environments.
+>>>>>>> 4cefc3f (Updated intro)
 
 Towhee solves this by packaging model training, testing, and deployments in a single package. Any of our embedding generation pipelines can be deployed either on a laptop, across a multi-GPU server\*, or in a cluster of machines in just a couple lines of code\*.
 
@@ -54,15 +71,27 @@ Towhee is _not_ a library for building neural nets (a-la Pytorch and Tensorflow)
 - Music Recognition: music identification with full-length song or a snippet
 
 #### Supported Pipelines:
+<<<<<<< HEAD
 
 - Image Embedding Pipelines
 - Audio Embedding Pipelines
+=======
+* [Image Embedding Pipelines](pipelines/image-embedding)
+* [Audio Embedding Pipelines](pipelines/music-embedding)
+>>>>>>> 4cefc3f (Updated intro)
 
 #### Supported Operators:
 
 #### Community:
+<<<<<<< HEAD
 
 - Github: https://github.com/towhee-io/towhee
 - Slack: https://slack.towhee.io
 - Twitter: https://twitter.com/towheeio
 - Github: https://github.com/towhee-io/towhee
+=======
+* Github: https://github.com/towhee-io/towhee
+* Slack: https://slack.towhee.io
+* Twitter: https://twitter.com/towheeio
+* Github: https://github.com/towhee-io/towhee
+>>>>>>> 4cefc3f (Updated intro)
