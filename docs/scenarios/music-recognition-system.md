@@ -1,9 +1,9 @@
 ---
-id: music-recognition-system
-title: Music Recognition System
+id: music-recognition
+title: Music Recognition
 ---
 
-# Music Recognition System
+# Music Recognition
 
 ## Overview
 
