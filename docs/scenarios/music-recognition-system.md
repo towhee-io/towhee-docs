@@ -1,5 +1,5 @@
 ---
-id: music-recognition
+id: music-recognition-system
 title: Music Recognition
 ---
 
