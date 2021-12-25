@@ -5,7 +5,7 @@ title: Reverse Image Search
 
 ### Overview
 
-**Reverse image search** helps you search for similar or related images using an input photo. Reverse image search is a [content-based image retrieval](https://en.wikipedia.org/wiki/Content-based_image_retrieval) (CBIR) query technique that involves providing the CBIR system with a sample image that it will then base its search upon.[1] Unlike the traditional image search that relies on labels to do the query, the reverse image search is based on the content of the image itself.
+**Reverse image search** helps you search for similar or related images given an input image. Reverse image search is a [content-based image retrieval](https://en.wikipedia.org/wiki/Content-based_image_retrieval) (CBIR) query technique that involves providing the CBIR system with a sample image that it will then base its search upon.[1] Unlike the traditional image search that relies on labels to do the query, the reverse image search is based on the content of the image itself.
 
 The applications of reverse image search include **finding the original source of an image**, **searching for similar materials, product search and recommendation.**
 
@@ -49,20 +49,12 @@ As mentioned in the key technology section, the reverse image search system main
 
 ![img](reverse_image_search.png)
 
-As shown in the figure above, the first two steps can be achieved by [Towhee](http://towhee.io)[2]. **Towhee is an open source deep learning platform** that can help process various unstructured data, such as images, audio, video, etc., while integrating a variety of image processing models, such as image feature extraction, image classification, target detection, etc. The image embedding pipeline in the figure is based on the ResNet50 model. Of course, the model in Pipeline can also be customized by users.
+As shown in the figure above, the first two steps can be achieved by [Towhee](http://towhee.io). **Towhee is an open source deep learning platform** that can help process various unstructured data, such as images, audio, video, etc., while integrating a variety of image processing models, such as image feature extraction, image classification, target detection, etc. The image embedding pipeline in the figure is based on the ResNet50 model. Of course, the model in Pipeline can also be customized by users.
 
-And **[Milvus](http://milvus.io)**[3] **is an open source vector database** that can achieve millisecond-level responses of hundreds of millions of data and complete efficient data analysis. It contains a variety of index and metrics of vectors, which can meet the various computing needs of users for vectors.
+And **[Milvus](http://milvus.io)** **is an open source vector database** that can achieve millisecond-level responses of hundreds of millions of data and complete efficient data analysis. It contains a variety of index and metrics of vectors, which can meet the various computing needs of users for vectors.
 
 So we use Milvus to store and analyze the image feature vectors extracted by Towhee. Though **Towhee + Milvus,** which can create a perfect picture search system.
 
 ### Resource
 
 In the reverse image search system, image feature extraction can be achieved through Towhee's Pipeline, such as [image-embedding-resnet50](https://hub.towhee.io/towhee/image-embedding-resnet50), which includes two main operators: [transform image](https://hub.towhee.io/towhee/transform-image-operator-template) (implemented as [towhee/transform-image](https://hub.towhee.io/towhee/transform-image)) and [image embedding](https://hub.towhee.io/towhee/image-embedding-operator-template) (implemented as [towhee/resnet50-image-embedding](https://hub.towhee.io/towhee/resnet50-image-embedding))
-
-### Reference
-
-[1] https://en.wikipedia.org/wiki/Reverse_image_search
-
-[2]https://github.com/towhee-io/towhee
-
-[3]https://github.com/milvus-io/milvus
