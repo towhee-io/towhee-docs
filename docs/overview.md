@@ -5,15 +5,15 @@ sidebar_label: Overview
 slug: /
 ---
 
-# Towhee overview
+## Towhee overview
 
-## What is Towhee?
+### What is Towhee?
 
 Towhee is a flexible, application-oriented framework for computing embedding vectors over unstructured data. It aims to make democratize `anything2vec`, allowing everyone - from beginner developers to large organizations - to train and deploy complex machine learning pipelines with just a few lines of code.
 
 To accomplish this, we built Towhee atop popular machine learning and unstructured data processing libraries, i.e. Pytorch, scikit-learn, OpenCV. Models or functions from different libraries are wrapped as standard Towhee operators, and can be integrated freely into application-oriented pipelines. To ensure user-friendliness, pipelines can be called in just a single line of code, without needing to understand the underlying models or modules used to build it. For more information, take a look at our [quick start](get-started/quick-start) page.
 
-## Problems Towhee solves
+### Problems Towhee solves
 
 - **An embedding pipeline is far more than a single neural network.** Think about embedding items from a given video. Such embedding process will involve video decompression, key-frame extraction, frame deduplication, object detection, cropping, encoding, etc. For industrial practice, this necessitates a platform that offers end-to-end embedding pipeline solutions, as well as supporting data parallesim and resource management.
 
@@ -29,7 +29,7 @@ To accomplish this, we built Towhee atop popular machine learning and unstructur
 
 \*_These features are coming in a future version of Towhee._
 
-## Design philosophy
+### Design philosophy
 
 - **Convenient**: Towhee pipelines can be created to implement a variety of embedding tasks. Any pipeline creations or embedding tasks can be done in no more than 10 lines of code. We provide a number of pre-built pipelines on our [hub](https://hub.towhee.io).
 
@@ -37,7 +37,7 @@ To accomplish this, we built Towhee atop popular machine learning and unstructur
 
 - **Application-oriented**: Instead of being "just another model hub", we provide full end-to-end embedding pipelines. Each pipeline can make use of any number of machine learning models or Python functions in a variety of configurations - ensembles, flows, or any combination thereof.
 
-## Where to go from here
+### Where to go from here
 
 #### Getting started:
 
