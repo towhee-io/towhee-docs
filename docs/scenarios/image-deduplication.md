@@ -11,7 +11,7 @@ Image deduplication is the process of finding exact or near-exact duplicates wit
 
 In particular, note that the middle image in the bottom row is not identical to the other two images, despite being a "duplicate". This is where the difficulty here lies - matching pure duplicates is a simple process, but matching images which are similar in the presence of changes in zoom, lighting, and noise is a much more challenging problem.
 
-### Key technologies
+### Key components
 
 In this section, we go over some key technologies (models, modules, scripts, etc...) used to successfully implement an image deduplication algorithm.
 
