@@ -3,8 +3,6 @@ id: reverse-image-search
 title: Reverse Image Search
 ---
 
-## Reverse image search
-
 ### Overview
 
 **Reverse image search** helps you search for similar or related images using an input photo. Reverse image search is a [content-based image retrieval](https://en.wikipedia.org/wiki/Content-based_image_retrieval) (CBIR) query technique that involves providing the CBIR system with a sample image that it will then base its search upon.[1] Unlike the traditional image search that relies on labels to do the query, the reverse image search is based on the content of the image itself.

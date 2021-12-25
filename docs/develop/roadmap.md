@@ -1,6 +1,4 @@
 ---
 id: roadmap
-title: Towhee roadmap
+title: Roadmap
 ---
-
-## Roadmap

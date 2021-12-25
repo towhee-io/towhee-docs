@@ -1,6 +1,4 @@
 ---
 id: frequent-errors
-title: Frequent errors
+title: Frequently Encountered Errors
 ---
-
-## Frequently encountered errors

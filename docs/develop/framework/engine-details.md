@@ -1,6 +1,4 @@
 ---
 id: engine-details
-title: Engine details
+title: Engine Details
 ---
-
-## Engine details

@@ -1,9 +1,7 @@
 ---
 id: image-ensemble-training
-title: Image ensemble training
+title: Image Ensemble Training
 ---
-
-## Image ensemble training
 
 Towhee provides ensemble pipelines for ensemble learning, which utilizes multi ML models to jointly solve problems like classification, image retrieval and so on.
 Besides, grid search and fusion model training solutions are included in towhee, letting developers to focus on strategy design.
