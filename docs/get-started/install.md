@@ -3,8 +3,6 @@ id: install
 title: Installation
 ---
 
-## Installation
-
 ### Install Towhee with conda
    1. create a conda environment for Towhee:
 

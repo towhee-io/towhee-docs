@@ -1,9 +1,7 @@
 ---
 id: DAG-details
-title: DAG Details
+title: DAG
 ---
-
-## DAG
 
 In Towhee, each pipeline will be stored as a DAG (directed acyclic graph) in which each node represents an operator. Towhee's engine will execute the operators according to the DAG. Towhee builds a series of representations to illustrate the pipeline.
 

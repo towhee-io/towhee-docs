@@ -3,8 +3,6 @@ id: image-deduplication
 title: Image Deduplication
 ---
 
-## Image deduplication
-
 ### Overview
 
 An Image deduplication task is to find exact (sometimes near as well) duplicates in an image collection. Here is an example:

@@ -3,8 +3,6 @@ id: contributing-guide
 title: Contributing Guide
 ---
 
-## Contributing guide
-
 ### Contributing to Towhee
 
 Submitting issues, answering questions, and improving documentation are some of the many ways you can join our growing community. Regardless of how you contribute, please remember to be respectful towards your fellow Towheeians.

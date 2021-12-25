@@ -1,6 +1,4 @@
 ---
 id: hub-integration-and-caching
-title: Hub integration and caching
+title: Hub Integration and Caching
 ---
-
-## Hub integration and caching

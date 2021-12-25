@@ -1,9 +1,7 @@
 ---
 id: music-embedding
-title: Audio embedding pipelines
+title: Audio Embedding Pipelines
 ---
-
-## Pre-built music embedding pipelines
 
 Audio describes human-hearable sound, which is normally recorded and transmitted via sound files in formats of MP3, FLAC, WAV, AIFF, etc. Audio embedding is the process of converting audio files into vector representations. Audio embeddings extracted by different models can be used for audio fingerprinting or classification.
 

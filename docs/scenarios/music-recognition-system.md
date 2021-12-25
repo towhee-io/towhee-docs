@@ -3,8 +3,6 @@ id: music-recognition-system
 title: Music Recognition
 ---
 
-## Music recognition
-
 ### Overview
 
 A music recognition system automatically identifies the unknown sound. It matches input audios with songs in the database. Compared to the traditional methodology using Wavelets, the use of deep learning saves resources and speeds up querying.

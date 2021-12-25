@@ -1,9 +1,7 @@
 ---
 id: architectural-overview
-title: Architectural overview
+title: Architecture Overview
 ---
-
-## Architecture Overview
 
 ![avatar](./framework.png)
 
