@@ -30,8 +30,10 @@ from towhee import pipeline
 # Initiate the pipeline. Once the utility `pipeline()` is called, all necessary 
 # `Pipeline` and `Operator` will be automatically downloaded from hub.towhee.io.
 embedding_pipeline = pipeline('image-embedding')
+
 # Run image through pipeline.
 output = embedding_pipeline('towhee_logo.png')
+
 # Print the output embedding.
 print(output)
 ```
