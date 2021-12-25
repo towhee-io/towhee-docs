@@ -3,13 +3,13 @@ id: music-embedding
 title: Audio embedding pipelines
 ---
 
-# Pre-built music embedding pipelines
+## Pre-built music embedding pipelines
 
 Audio describes human-hearable sound, which is normally recorded and transmitted via sound files in formats of MP3, FLAC, WAV, AIFF, etc. Audio embedding is the process of converting audio files into vector representations. Audio embeddings extracted by different models can be used for audio fingerprinting or classification.
 
 
 
-**Popular Scenarios:**
+### Popular Scenarios
 
 - Recognize audio events or scenes
 - Translate speech audio into words
@@ -21,7 +21,7 @@ Audio describes human-hearable sound, which is normally recorded and transmitted
 
 
 
-## Pipelines
+### Pipelines
 
 Deep learning models using neural networks models have been introduced to the audio domain in similar ways as they work in image. Most models include preprocessing work such as data splitting, audio convention, downsampling, Fourier Transform, etc. Towhee offers the following pipelines with pretrained models to get embeddings of a given audio:
 

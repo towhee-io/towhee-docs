@@ -3,9 +3,9 @@ id: reverse-image-search
 title: Reverse Image Search
 ---
 
-# Reverse image search
+## Reverse image search
 
-## Overview
+### Overview
 
 **Reverse image search** helps you search for similar or related images using an input photo. Reverse image search is a [content-based image retrieval](https://en.wikipedia.org/wiki/Content-based_image_retrieval) (CBIR) query technique that involves providing the CBIR system with a sample image that it will then base its search upon.[1] Unlike the traditional image search that relies on labels to do the query, the reverse image search is based on the content of the image itself.
 
@@ -25,7 +25,7 @@ Search for product images taken by users on the e-commerce platform to find the 
 
 These reverse image search applications are the most common in various fields, but how to analyze images efficiently and accurately still has questions. Are the searched image results satisfactory? Is search efficient when it has a large amount of data? Or is there a unified plan for these applications? What technology is needed to achieve it?
 
-## Key technologies
+### Key technologies
 
 With the quick development of AI technology, there are more and more methods to processing unstructured data, and the reverse image search application above can be realized with AI models. Before processing with the models, the image data needs to be pre-processed or transformed. And in the scenarios of reverser image search, model is usually used to extract image feature vectors, and after getting the feature vectors, we can store it and query with vector database.
 
@@ -41,7 +41,7 @@ Models are used to extract feature vectors of images, which is the most critical
 
 In order to achieve a wonderful reverse image search system, effective search tools are very important. When dealing with very large vectors, using exact search methods will make the system very slow. So we need a vector database that can build an index for faster search, and also safely store the data.
 
-## Solutions
+### Solutions
 
 As mentioned in the key technology section, the reverse image search system mainly includes three parts:
 
@@ -57,11 +57,11 @@ And **[Milvus](http://milvus.io)**[3] **is an open source vector database** that
 
 So we use Milvus to store and analyze the image feature vectors extracted by Towhee. Though **Towhee + Milvus,** which can create a perfect picture search system.
 
-## Resource
+### Resource
 
 In the reverse image search system, image feature extraction can be achieved through Towhee's Pipeline, such as [image-embedding-resnet50](https://hub.towhee.io/towhee/image-embedding-resnet50), which includes two main operators: [transform image](https://hub.towhee.io/towhee/transform-image-operator-template) (implemented as [towhee/transform-image](https://hub.towhee.io/towhee/transform-image)) and [image embedding](https://hub.towhee.io/towhee/image-embedding-operator-template) (implemented as [towhee/resnet50-image-embedding](https://hub.towhee.io/towhee/resnet50-image-embedding))
 
-## Reference
+### Reference
 
 [1] https://en.wikipedia.org/wiki/Reverse_image_search
 

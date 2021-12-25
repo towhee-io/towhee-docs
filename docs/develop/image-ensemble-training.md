@@ -3,7 +3,7 @@ id: image-ensemble-training
 title: Image ensemble training
 ---
 
-# Image ensemble training
+## Image ensemble training
 
 Towhee provides ensemble pipelines for ensemble learning, which utilizes multi ML models to jointly solve problems like classification, image retrieval and so on.
 Besides, grid search and fusion model training solutions are included in towhee, letting developers to focus on strategy design.
@@ -14,7 +14,7 @@ Example embedding ensemble for embedding based image retrieval on Imagenet2012 d
 
 When we used only one model to extract the embedding vector to make the image retrieval, we got the best result(0.6034 mAP@50) in the 4 single models.  When we concated embeddings from different models with different weights, we got a better result(0.6161 mAP@50), which made a 1.3% improvement compared to former. This result shows that the embedding ensemble method does improve the retrieval result compared to single model.
 
-# Imagenet dataset ensemble experiments
+### Imagenet dataset ensemble experiments
 
 **Dataset**: ImageNet(Train:128k val: 50k)
 
@@ -22,7 +22,7 @@ When we used only one model to extract the embedding vector to make the image re
 
 **Evaluation Methodology**: for every image in ImageNet val dataset, return a sorted list(size 51) for most similar images in the same dataset, calculate the metric score for later 50 (the first should be the query image itself). The retrievaled image tagged same label with queried image would be considered positive, and others would be considered negative.
 
-## single model experiments
+### Single model experiments
 
 | exp  | Models                        | dimension | mAP@50 score       | rank |
 | ---- | ----------------------------- | --------- | ------------------ | ---- |
@@ -31,7 +31,7 @@ When we used only one model to extract the embedding vector to make the image re
 | 3    | vit_large_patch16_224         | 1024      | 0.5844048334876    | 3    |
 | 4    | resnet101                     | 2048      | 0.5490212793579341 | 4    |
 
-## 2 models output concat experiments(grid search, w1, w2 in [1, 2, 3, 4, 5])
+### 1 models output concat experiments(grid search, w1, w2 in [1, 2, 3, 4, 5])
 
 | exp  | Models                                                      | dimension | mAP@50 score       | rank |
 | ---- | ----------------------------------------------------------- | --------- | ------------------ | ---- |
@@ -44,7 +44,7 @@ When we used only one model to extract the embedding vector to make the image re
 | 5    | resnet101(2.0)+ tf_efficientnet_b7(1.0)                     | 2048+2560 | 0.607685290190145  | 11   |
 |      |                                                             |           |                    |      |
 
-## 3 models output concat experiments(grid search, w1, w2, w3 in [1, 2, 3, 4, 5])
+### 3 models output concat experiments(grid search, w1, w2, w3 in [1, 2, 3, 4, 5])
 
 | exp  | Models                                                       | dimension      | mAP@50 score       | rank |
 | ---- | ------------------------------------------------------------ | -------------- | ------------------ | ---- |
@@ -55,7 +55,7 @@ When we used only one model to extract the embedding vector to make the image re
 | 4    | tf_efficientnet_b7(5.0)+ swin_large_patch4_window7_224(5.0)+ vit_large_patch16_224tf_efficientnet_b7(1.0) | 2560+1536+1024 | 0.6136430147338187 | 40   |
 |      |                                                              |                |                    |      |
 
-## 4 models output concat experiments(grid search, w1, w2, w3, w4 in [1, 2, 3, 4, 5])
+### 4 models output concat experiments(grid search, w1, w2, w3, w4 in [1, 2, 3, 4, 5])
 
 | exp  | Models                                                       | dimension            | mAP@50 score       | rank |
 | ---- | ------------------------------------------------------------ | -------------------- | ------------------ | ---- |
@@ -65,7 +65,7 @@ When we used only one model to extract the embedding vector to make the image re
 | ...  |                                                              |                      |                    | ...  |
 |      |                                                              |                      |                    |      |
 
-## History experiments(David)
+### History experiments(David)
 
 | Exp  | Models                                                       | Description                                 | dimension      | mAP@50 score |
 | ---- | ------------------------------------------------------------ | ------------------------------------------- | -------------- | ------------ |

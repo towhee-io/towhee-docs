@@ -3,7 +3,9 @@ id: install
 title: Installation
 ---
 
-# Install Towhee with conda
+## Installation
+
+### Install Towhee with conda
    1. create a conda environment for Towhee:
 
    ```console
@@ -20,13 +22,13 @@ title: Installation
    conda install towhee
    ```
 
-# Install Towhee with pip
+### Install Towhee with pip
    install towhee using the following line:
    ```console
    pip install towhee
    ```
 
-# Install Towhee from source code
+### Install Towhee from source code
    1. First, if using a venv, activate it before moving ahead. (If you want to install Towhee directly into your environment, skip this step.)
 
    * Decide on a location to install the virtual enviroment. This location will contain all the files for the virtual enviroment and the venv will be activated from this location.
