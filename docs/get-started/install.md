@@ -5,17 +5,26 @@ title: Installation
 
 # Install Towhee with conda
    1. create a conda environment for Towhee:
-   `conda create -n towhee_env python=3.6`
+
+   ```console
+   conda create -n towhee_env python=3.6
+   ```
 
    2. activate conda environment:
-   `conda activate towhee_env`
+   ```console
+   conda activate towhee_env
+   ```
 
    3. install towhee using the following line:
-   `conda install towhee`
+   ```console
+   conda install towhee
+   ```
 
 # Install Towhee with pip
    install towhee using the following line:
-   `pip install towhee`
+   ```console
+   pip install towhee
+   ```
 
 # Install Towhee from source code
    1. First, if using a venv, activate it before moving ahead. (If you want to install Towhee directly into your environment, skip this step.)
@@ -23,10 +32,14 @@ title: Installation
    * Decide on a location to install the virtual enviroment. This location will contain all the files for the virtual enviroment and the venv will be activated from this location.
 
    For a POSIX system:
-   `python3 -m venv /path/to/venv`
+   ```console
+   python3 -m venv /path/to/venv
+   ```
 
    For a Windows system:
-   `c:\>c:\Python35\python -m venv c:\path\to\venv`
+   ```console
+   c:\>c:\Python35\python -m venv c:\path\to\venv
+   ```
 
    * Start the virtual environment using the command corresponds to your system:
 
@@ -42,8 +55,11 @@ title: Installation
    2. If not already present, install git on your system. See https://github.com/git-guides/install-git for more details.
 
    3. Next, clone the towhee repository:
-   `git clone https://github.com/towhee-io/towhee.git`
+   ```console
+   git clone https://github.com/towhee-io/towhee.git
+   ```
 
    4. After the download is done, proceed into the towhee directory and run the following command:
-   `python setup.py install`
-
+   ```console
+   python setup.py install
+   ```
