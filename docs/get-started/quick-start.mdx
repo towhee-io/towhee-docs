@@ -14,7 +14,9 @@ Try Towhee in this page, plase click
 <KatacodaBtn />
 
 ## Install Towhee
-`pip install towhee`
+```console
+pip install towhee
+```
 If you want to install Towhee with conda or from source code, see [this page](get-started/install) for more details.
 
 ## Try your first pipeline
@@ -37,7 +39,7 @@ print(output)
 ## Try more pipelines
 
 We can try more pipelines by replacing the pipeline name, for example, a image embedding pipeline with ResNet101 encoder can be created via
-```
+```python
 embedding_pipeline = pipeline('image-embedding-resnet101')
 ```
 A summary of image embedding pipelines can be found at [this page](pipelines/image-embedding).
