@@ -9,21 +9,21 @@ A music recognition system automatically identifies the unknown sound. It matche
 
 ![image1](music_intro.png)
 
-### Key Technologies
+### Key technologies
 
-**Audio Preprocessing**
+##### Audio preprocessing
 
 Sometimes the system needs to transform input audio into specified type and format. The main transformation may include converting file types, splitting into clips of fixed lengths, changing sample rates, and denoising audios. Then the system applies tools and packages to read data and sample rate of audio files after transformations. The data is usually a representation of an audio in a numpy array.
 
-**Embedding Models**
+##### Embedding models
 
 An embedding model is used to convert audios into embeddings. Normally an audio embedding model is built up with deep neural networks. Once a model is pretrained on a large audio dataset, its model weight can be applied directly or with finetune to extract features for music clips.
 
-**Vector Database**
+##### Vector database
 
 The system requires a proper database to store and retrieve vectors. Especially when dealing with a large scale of vectors, flat search is very slow. It is necessary to have a vector database that can build indexes to reduce search latency. Meanwhile, a database can deal with data storage and persistence.
 
-### Solution
+### Putting it all together
 
 A music recognition system generally transforms audio data to embeddings and compares similarity based on distances between embeddings. Therefore, an encoder converting audio to embedding and a database for vector storage and retrieval are main components.
 
@@ -43,7 +43,7 @@ The above picture is a brief system architecture of a music recognition system b
 
 ### Resources
 
-In the music recognition system, audio fringerprints can be extracted through a Towhee pipeline. Towhee hub provides different options of pipelines, such as [audio-embedding-vggish](https://hub.towhee.io/towhee/audio-embedding-vggish) or [audio-embedding-clmr](https://hub.towhee.io/towhee/audio-embedding-clmr), with respect to models.
+In the music recognition system, audio fingerprints can be extracted through a Towhee pipeline. Towhee hub provides different options of pipelines, such as [audio-embedding-vggish](https://hub.towhee.io/towhee/audio-embedding-vggish) or [audio-embedding-clmr](https://hub.towhee.io/towhee/audio-embedding-clmr).
 
 ### References
 
