@@ -9,7 +9,7 @@ A music recognition system automatically identifies a piece of music by matching
 
 ![image1](music_intro.png)
 
-### Key technologies
+### Key components
 
 ##### Preprocessing
 
