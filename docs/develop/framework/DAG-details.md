@@ -3,13 +3,13 @@ id: DAG-details
 title: DAG Details
 ---
 
-# DAG Details
+## DAG
 
 In Towhee, each pipeline will be stored as a DAG (directed acyclic graph) in which each node represents an operator. Towhee's engine will execute the operators according to the DAG. Towhee builds a series of representations to illustrate the pipeline.
 
-# **Representations**
+### Representations
 
-## **BaseRepr**
+**BaseRepr**
 
 All the representations are inherited from a base representation class called `BaseRepr`, which covers some mutual functions such as load and verification.
 
@@ -17,7 +17,7 @@ Towhee provides several ways of loading the representations. Users can either lo
 
 Towhee will automatically check the validity of the given information. All the components have some must-have information. If users want to contribute their own pipelines or operators, please refer to [YAML Example](https://zilliverse.feishu.cn/docs/doccn3wy3s2CN1WExXkcIKuCXYe#YAML Example).
 
-## **GraphRepr**
+**GraphRepr**
 
 `GraphRepr` is the representation of a DAG(pipeline) in Towhee. A graph can be represented by its nodes(operators) and edges(dataframes). Therefore a `GraphRepr` has two attributes `_operators`(a dict of `OperatorRepr`)and  `_dataframes`(a dict of `DataFrameRepr`).
 
@@ -25,7 +25,7 @@ When generating a `GraphRepr` from a YAML, Towhee will do some static check to c
 
 Generating a `GraphrRepr` is actually loading the operator and dataframe information from the given YAML file and putting into `_operators` and `_dataframes`.  
 
-## **OperatorRepr**
+**OperatorRepr**
 
 An operator is the unit to process the input data in a Towhee pipeline.When creating an
 
@@ -45,11 +45,11 @@ An operator is the unit to process the input data in a Towhee pipeline.When crea
 
 - Framework: optional, if the operator is neural network related and based on some machine learning framworks, users can specify which framework to use. Towhee use pytroch in deafult.
 
-## **DataFrameRepr**
+**DataFrameRepr**
 
 The `DataFrameRepr` is the representation of the data that flows in the pipeline. Each dataframe has several columns. Therefore `DataFrameRepr` has one vital attribute `_columns`, which is a list. `_columns`contains the column information including data type. When running a pipeline, users have to make sure all the operators receive and generate the exact type of data as described in the `DataFrameRepr`.
 
-# **YAML**
+**YAML**
 
 The YAML is the file to illustrate and generate the pipeline. In current stage, pipeline conitrbutors have to write their own YAML files according to our template. However in the coming future, Towhee will provides APIs for users to generate the YAML.
 
@@ -69,7 +69,7 @@ Basically a correct YAML file consists of pipeline name, operators, dataframes.
 
 - Dataframs: the information the the dataframes in this pipeline, including name, column name, column type.
 
-## **YAML Example**
+**YAML Example**
 
 Here is an example of image embedding:
 

@@ -3,29 +3,29 @@ id: contributing-guide
 title: Contributing Guide
 ---
 
-# Contributing guide
+## Contributing guide
 
-## Contributing to Towhee
+### Contributing to Towhee
 
 Submitting issues, answering questions, and improving documentation are some of the many ways you can join our growing community. Regardless of how you contribute, please remember to be respectful towards your fellow Towheeians.
 
-### Contributing code
+**Contributing code**
 
 The Towhee community maintains a list of [Good First Issues](https://github.com/towhee-io/towhee/contribute).
 
-### Sharing a new operator or pipeline
+**Sharing a new operator or pipeline**
 
 Pipeline and operator contributions to our Towhee Hub are just as valued as artwork, code, and documentation contributions. If you have a new model, useful script, or an `x2vec` pipeline that you'd like to share with the Towhee community, get in touch with us on Slack!
 
-### Submitting a new issue or feature request
+**Submitting a new issue or feature request**
 
 Please follow the [templates](https://github.com/towhee-io/towhee/issues/new/choose) we provide for submitting bugs, enhancements, and/or feature requests; try to avoid opening blank issues whenever possible.
 
-### Style guide
+**Style guide**
 
 We generally follow the [Google Python style guide](https://google.github.io/styleguide/pyguide.html) - this applies to the main `towhee-io/towhee` repo on Github as well as code uploaded to our Towhee Hub. We have some special rules regarding line length, imports, and whitespace - please take a look at the [Towhee style guide](https://github.com/towhee-io/towhee/STYLE_GUIDE.md) for more information.
 
-## Pull requests
+### Pull requests
 
 We follow a fork-and-pull model for all contributions. Before starting, we strongly recommend looking through existing PRs so you can get a feel for things.
 
