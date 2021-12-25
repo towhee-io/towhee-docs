@@ -1,9 +1,10 @@
 ---
 id: overview
-title: Towhee Overview
+title: Overview
 sidebar_label: Overview
-slug: /
 ---
+
+## Towhee Overview
 
 ### What is Towhee?
 
