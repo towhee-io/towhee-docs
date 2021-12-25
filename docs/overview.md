@@ -15,15 +15,15 @@ To accomplish this, we built Towhee atop popular machine learning and unstructur
 
 - **An embedding pipeline is far more than a single neural network.** Think about embedding items from a given video. Such embedding process will involve video decompression, key-frame extraction, frame deduplication, object detection, cropping, encoding, etc. For industrial practice, this necessitates a platform that offers end-to-end embedding pipeline solutions, as well as supporting data parallesim and resource management.
 
-    Towhee solves this problem by reintroducing the concept of `Pipeline` as being _application-centric_ instead of _model-centric_. Where model-centric pipelines are composed of a single model followed by auxiliary code, application-centric pipelines treat every single data processing steps as first class citizens.
+  Towhee solves this problem by reintroducing the concept of `Pipeline` as being _application-centric_ instead of _model-centric_. Where model-centric pipelines are composed of a single model followed by auxiliary code, application-centric pipelines treat every single data processing steps as first class citizens.
 
 - **Too many model implementations exist without any interface standard.** Machine learning models (NN-based and traditional) are ubiquitous. Different implementations of machine learning models requires different auxiliary code to support testing and fine-tuning, making model evaluation and productionization a tedious task.
 
-    Towhee solves this by providing a universal `Operator` wrapper for all models. Operators have a pre-defined API and glue logic to make Towhee work with diverse machine learning and data processing libraries.
+  Towhee solves this by providing a universal `Operator` wrapper for all models. Operators have a pre-defined API and glue logic to make Towhee work with a number of machine learning and data processing libraries.
 
 - **MLOps is easier said than done.** Due to the continuous inflow of new training data, many DevOps teams now have a dedicated MLOps subteam to enable automated testing and productionization of machine learning models. The constant architectural updates to SOTA deep learning models also creates significant overhead when deploying new said models in production environments.
 
-    Towhee solves this by packaging model training, testing, and deployments in a single package. Any of our embedding generation pipelines can be deployed either on a laptop, across a multi-GPU server\*, or in a cluster of machines in just a couple lines of code\*.
+  Towhee solves this by packaging model training, testing, and deployment in a single package. Any of our embedding generation pipelines can be deployed either on a laptop, across a multi-GPU server\*, or in a cluster of machines in just a couple lines of code\*.
 
 \*_These features are coming in a future version of Towhee._
 
@@ -51,7 +51,6 @@ To accomplish this, we built Towhee atop popular machine learning and unstructur
 
 - [Image embedding pipelines](pipelines/image-embedding)
 - [Audio embedding pipelines](pipelines/music-embedding)
-
 
 #### Supported operators:
 
