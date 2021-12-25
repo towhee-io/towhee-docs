@@ -21,7 +21,7 @@ const sidebars = {
   doc: [
     'overview',
     {
-      'Getting started': ['get-started/quick-start', 'get-started/install'],
+      'Getting started': ['get-started/install', 'get-started/quick-start'],
     },
     {
       Scenarios: [
