@@ -17,11 +17,11 @@ Towhee will automatically check the validity of the given information. All the c
 
 **GraphRepr**
 
-`GraphRepr` is the representation of a DAG(pipeline) in Towhee. A graph can be represented by its nodes(operators) and edges(dataframes). Therefore a `GraphRepr` has two attributes `_operators`(a dict of `OperatorRepr`)and  `_dataframes`(a dict of `DataFrameRepr`).
+`GraphRepr` is the representation of a DAG(pipeline) in Towhee. A graph can be represented by its nodes(operators) and edges(dataframes). Therefore a `GraphRepr` has two attributes `_operators`(a dict of `OperatorRepr`)and `_dataframes`(a dict of `DataFrameRepr`).
 
 When generating a `GraphRepr` from a YAML, Towhee will do some static check to check the validity of the YAML file, such as loop detection and isolation detection. Note that we do not allow loops or isolations in the graph.
 
-Generating a `GraphrRepr` is actually loading the operator and dataframe information from the given YAML file and putting into `_operators` and `_dataframes`.  
+Generating a `GraphrRepr` is actually loading the operator and dataframe information from the given YAML file and putting into `_operators` and `_dataframes`.
 
 **OperatorRepr**
 
