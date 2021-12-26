@@ -24,7 +24,7 @@ const sidebars = {
       'Getting started': [
         'get-started/install',
         'get-started/quick-start',
-        'get-started/pipeline-config',
+        //'get-started/pipeline-config',
       ],
     },
     {
@@ -40,12 +40,12 @@ const sidebars = {
         'pipelines/music-embedding',
       ],
     },
-    {
+    /*{
       'Supported operators': [
         'operators/image-loading-and-transforms',
         'operators/model-based-operators',
       ],
-    },
+    },*/
     {
       Advanced: [
         'advanced/contributing-guide',
