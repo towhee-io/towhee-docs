@@ -1,6 +1,6 @@
 ---
 id: layer-details
-title: Architecture part III: Layers
+title: Architecture part III - Layers
 ---
 
 Towhee offers an increasing group of layer blocks, which play as 'legos' for fast construction of machine learning models. Classical and newly published models are all supported.
