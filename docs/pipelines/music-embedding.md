@@ -13,7 +13,6 @@ Audio describes human-hearable sound, which is normally recorded and transmitted
 - Identify music with a short clip
 - Music copyright infringement
 - Generate original music by machine
-- ...
 
 ### Pipelines
 
