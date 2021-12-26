@@ -33,44 +33,43 @@ If you're interested in contributing to the `towhee-io/towhee` codebase, follow 
 
 2. Clone your forked version of Towhee.
 
-  ```bash
-  $ git clone https://github.com/<your_username>/towhee.git
-  $ cd towhee
-  ```
+```bash
+$ git clone https://github.com/<your_username>/towhee.git
+$ cd towhee
+```
 
-  If you've done this step before, make sure you're on the `main` branch and sync your changes.
+If you've done this step before, make sure you're on the `main` branch and sync your changes.
 
-  ```bash
-  $ git checkout main
-  $ git pull origin main
-  ```
+```bash
+$ git checkout main
+$ git pull origin main
+```
 
 3. Think up a suitable name for your update, bugfix, or feature. Try to avoid using branch names you've already used in the past.
 
-  ```bash
-  $ git checkout -b my-creative-branch-name
-  ```
+```bash
+$ git checkout -b my-creative-branch-name
+```
 
 4. During development, you might want to run `pylint` or one of the tests. You can do so with one of the commands below:
 
-  ```bash
-  $ pylint --rcfile pylint.conf
-  $ pytest tests/unittests/<test_case>.py
-  ```
+```bash
+$ pylint --rcfile pylint.conf
+$ pytest tests/unittests/<test_case>.py
+```
 
 5. If you're contributing a bugfix or docfix, squash your previous `N` commits. The interactive rebase functionality provided by git will walk you through the commit squashing process.
 
-  ```bash
-  $ git rebase -i HEAD~N
-  ```
+```bash
+$ git rebase -i HEAD~N
+```
 
-  P.S. Don't forget to commit your changes! We use a single-phrase, periodless format for commit messages (be sure to capitalize the first character):
+P.S. Don't forget to commit your changes! We use a single-phrase, periodless format for commit messages (be sure to capitalize the first character):
 
-  ```bash
-  $ git commit -m "My awesome commit message"
-  ```
+```bash
+$ git commit -m "My awesome commit message"
+```
 
 6. Submit your pull request on Github. Folks in the community will discuss your pull request, and maintainers might ask you for some changes. This happens very frequently (including maintainers themselves), so don't worry if it happens to you as well.
 
-  Note that Towhee uses [DCOs](https://developercertificate.org/) to sign pull requests. Please ensure that the first line of your PR is as follows:
-  Signed-off-by: Your Name your.email@domain.com
+Note that Towhee uses [DCOs](https://developercertificate.org/) to sign pull requests. Please ensure that the first line of your PR is as follows: Signed-off-by: Your Name your.email@domain.com

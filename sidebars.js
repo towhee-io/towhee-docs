@@ -21,13 +21,17 @@ const sidebars = {
   doc: [
     'overview',
     {
-      'Getting started': ['get-started/install', 'get-started/quick-start'],
+      'Getting started': [
+        'get-started/install',
+        'get-started/quick-start',
+        'get-started/pipeline-config',
+      ],
     },
     {
-      Scenarios: [
-        'scenarios/image-deduplication',
-        'scenarios/music-recognition-system',
-        'scenarios/reverse-image-search',
+      Tutorials: [
+        'tutorials/image-deduplication',
+        'tutorials/music-recognition-system',
+        'tutorials/reverse-image-search',
       ],
     },
     {
@@ -43,30 +47,15 @@ const sidebars = {
       ],
     },
     {
-      'Dive deep': [
-        'dive-deep/pipeline-config',
-        'dive-deep/hub-integration-and-caching',
-        'dive-deep/frequent-errors',
-        'dive-deep/contributing-guide',
-      ],
-    },
-    {
-      Develop: [
-        {
-          Framework: [
-            'develop/framework/architectural-overview',
-            'develop/framework/DAG-details',
-            'develop/framework/engine-details',
-          ],
-        },
-        {
-          Layer: [
-            'develop/layer/layer-introduction',
-            'develop/layer/layer-details',
-          ],
-        },
-        'develop/image-ensemble-training',
-        'develop/roadmap',
+      Advanced: [
+        'advanced/contributing-guide',
+        'advanced/architectural-overview',
+        'advanced/DAG-details',
+        'advanced/engine-details',
+        'advanced/layer-details',
+        'advanced/hub-integration-and-caching',
+        'advanced/image-ensemble-training',
+        'advanced/roadmap',
       ],
     },
   ],
