@@ -1,6 +1,6 @@
 ---
 id: image-embedding
-title: Image Embedding Pipelines
+title: Image embedding pipelines
 ---
 
 This is a summary of available image embedding pipelines in [towhee.hub](https://hub.towhee.io/). These reusable pipelines simplify the code for image embedding extraction, which can be used for image search, attention analysis, feature extraction backbone for later models.

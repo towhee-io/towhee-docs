@@ -1,6 +1,6 @@
 ---
 id: music-recognition-system
-title: Music Recognition
+title: Music recognition
 ---
 
 ### Overview

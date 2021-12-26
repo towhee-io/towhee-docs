@@ -1,6 +1,6 @@
 ---
 id: image-deduplication
-title: Image Deduplication
+title: Image deduplication
 ---
 
 ### Overview

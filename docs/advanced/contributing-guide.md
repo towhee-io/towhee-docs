@@ -1,6 +1,6 @@
 ---
 id: contributing-guide
-title: Contributing Guide
+title: Contributing guide
 ---
 
 ### Contributing to Towhee

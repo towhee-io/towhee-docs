@@ -1,6 +1,6 @@
 ---
 id: reverse-image-search
-title: Reverse Image Search
+title: Reverse image search
 ---
 
 ### Overview
