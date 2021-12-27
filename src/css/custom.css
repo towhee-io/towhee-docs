@@ -26,3 +26,31 @@
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+.header-link {
+  font-weight: bold;
+  margin-right: 16px;
+}
+
+.header-outline-button {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+  .header-outline-button {
+    padding: 8px 16px !important;
+    border: 1px solid #010e29;
+    border-radius: 4px;
+    line-height: 16px;
+    font-size: 14px;
+  }
+
+  .header-outline-button:hover {
+    border-color: #25c2a0;
+  }
+}
+
+.navbar__item-github-star {
+  margin-top: 8px;
+  margin-right: 16px;
+}
