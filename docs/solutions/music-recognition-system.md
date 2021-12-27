@@ -28,7 +28,7 @@ The embedding model is used to convert audio into embeddings. Music recognition 
 
 The system requires a proper database to store and retrieve vectors; when dealing with a massive quantity of vectors, flat/naive search is very slow. It is necessary to have a vector database that can build indexes to reduce search latency all while handling storage and persistence.
 
-For this step, we use [Milvus](https://milvus.io), a state use a state-of-the-art vector database that can support billions of vectors. It also allows users to build indexes in order to speed up the querying process. Given a list of audio files, we can preprocess, embed, and store the results within Milvus as follows:
+For this step, we use [Milvus](https://milvus.io), a state use a state-of-the-art vector database that can support billions of vectors. It also allows users to build indexes in order to speed up the querying process. Given a list of audio files, we can preprocess, embed, and search for best matches using Milvus as follows:
 
 ```python
 >>> from milvus import Milvus
@@ -36,7 +36,7 @@ For this step, we use [Milvus](https://milvus.io), a state use a state-of-the-ar
 >>> results = milvus.search(collection_name='music_recognition', query_records=query_embeddings, top_k=10, params={'nprobe': 16})
 ```
 
-> Note that this step assumes that Milvus (and its Python bindings) is already installed and that vectors have already been added into the database. For more information on the installation and insert process, please visit the [Milvus docs](https://milvus.io/docs/v1.1.1/install_milvus.md).
+Note that this step assumes that Milvus (and its Python bindings) is already installed and that vectors have already been added into the database. For more information on the installation and insert process, please visit the [Milvus docs](https://milvus.io/docs/v1.1.1/install_milvus.md).
 
 ### Putting it all together
 
