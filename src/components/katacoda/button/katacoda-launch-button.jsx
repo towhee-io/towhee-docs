@@ -18,7 +18,7 @@ const KatacodaBtn = () => {
         id="katacoda-terminal"
         data-katacoda-ondemand="true"
         // data-katacoda-port="30000"
-        data-katacoda-env="ubuntu"
+        data-katacoda-env="ubuntu:2004"
         // data-katacoda-command="start.sh"
         data-katacoda-ui="panel"></div>
       <button className={styles.button} onClick={handleBtnClick}>
