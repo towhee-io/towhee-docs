@@ -47,7 +47,7 @@ const config = {
         logo: {
           alt: "Towhee logo",
           src: "img/logo.png",
-          href: "/",
+          href: "https://towhee.io/",
         },
         items: [
           // {
@@ -98,7 +98,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Zilliz. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Towhee. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
