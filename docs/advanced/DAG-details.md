@@ -25,13 +25,13 @@ Generating a `GraphrRepr` is actually loading the operator and dataframe informa
 
 **OperatorRepr**
 
-An operator is the unit to process the input data in a Towhee pipeline.When creating an
+An operator is the unit to process the input data in a Towhee pipeline. When creating an
 
 `OperatorRepr`, we need the following information:
 
 - Name: the name of the operator.
 
-- Function: in the form of 'author/operator_name', so Towhee's engine can find the corresponding functional unit either from local cache or Towhee' hub.
+- Function: in the form of 'author/operator_name', so Towhee's engine can find the corresponding functional unit either from local cache or Towhee hub.
 
 - Tag: optional, the version of operator to use, since each operator repo might have several branches or tags in Towhee's hub, users can specify the tag to use, otherwise Towhee use 'main' in default.
 
@@ -41,7 +41,7 @@ An operator is the unit to process the input data in a Towhee pipeline.When crea
 
 - Iter_info: the way of processing input data.
 
-- Framework: optional, if the operator is neural network related and based on some machine learning framworks, users can specify which framework to use. Towhee use pytroch in deafult.
+- Framework: optional, if the operator is neural network related and based on some machine learning framworks, users can specify which framework to use. Towhee use pytroch in default.
 
 **DataFrameRepr**
 
@@ -49,23 +49,19 @@ The `DataFrameRepr` is the representation of the data that flows in the pipeline
 
 **YAML**
 
-The YAML is the file to illustrate and generate the pipeline. In current stage, pipeline conitrbutors have to write their own YAML files according to our template. However in the coming future, Towhee will provides APIs for users to generate the YAML.
+The YAML is the file to illustrate and generate the pipeline. In current stage, pipeline contributors have to write their own YAML files according to our template. However in the coming future, Towhee will provides APIs for users to generate the YAML.
 
 Basically a correct YAML file consists of pipeline name, operators, dataframes.
 
-- Name: the name of the pipeline, in Towhee, pipelines are distuinguished by their authors and names, which means one author cannot create two pipelines with the same name.
+- Name: the name of the pipeline, in Towhee, pipelines are distinguished by their authors and names, which means one author cannot create two pipelines with the same name.
 
-- Operators: the inforamtion of the operators in this pipeline, as mentioned in
-
-  OperatorRepr
-
-  . There are two points to pay attention to:
+- Operators: the information of the operators in this pipeline, as mentioned in `OperatorRepr`. There are two points to pay attention to:
 
   - All the pipelines should have two operators `_start_op` and `_end_op`. They do not perform any functionality, but are the sign of start and end of the pipeline.
 
-- Make sure the operators exists either in the local cache or Towhee's hub.
+  - Make sure the operators exists either in the local cache or Towhee's hub.
 
-- Dataframs: the information the the dataframes in this pipeline, including name, column name, column type.
+- Dataframes: the information of dataframes in this pipeline, including name, column name, column type.
 
 **YAML Example**
 
