@@ -15,10 +15,6 @@ A music recognition system automatically identifies a piece of music by matching
 
 Neural network based music embedding solutions often require the input audio to be of a specific format and length. Similar to preprocessing images for use in neural networks, preprocessing music (and other audio) involves transformations such as converting file types, splitting into fixed-length crops, changing sample rates, and denoising. The final representation of the audio data is a numpy array.
 
-```python
->>>
-```
-
 ##### Encoder-based embedding model
 
 The embedding model is used to convert audio into embeddings. Music recognition requires a model that is invariant to changes in pitch and noise, making an encoder-based model an obvious candidate (our [image deduplication application](tutorials/image-deduplication) also uses such a model). Towhee makes it incredibly easy to compute audio embeddings, given transformed data:
@@ -35,7 +31,9 @@ The system requires a proper database to store and retrieve vectors; when dealin
 For this step, we use [Milvus](https://milvus.io), a state use a state-of-the-art vector database that can support billions of vectors. It also allows users to build indexes in order to speed up the querying process. Given a list of audio files, we can preprocess, embed, and store the results within Milvus as follows:
 
 ```python
->>>
+>>> from milvus import Milvus
+>>> milvus = Milvus(host='localhost', port='19530')
+>>> results = milvus.search(collection_name='music_recognition', query_records=query_embeddings, top_k=10, params={'nprobe': 16})
 ```
 
 ### Putting it all together
@@ -49,9 +47,13 @@ The above picture is a brief system architecture of a music recognition system b
 During querying, the audio is preprocessed as in the music embedding model; all results of the preprocessing step are passed into Milvus as search targets. The output vector IDs are then fed into the relational database (MySQL), which returns a list of the most probable music.
 
 ```python
->>>
+>>> from towhee import pipeline
+>>> from milvus import Milvus
+>>> embedding_pipeline = pipeline('music-encoder')
+>>> query_embeddings = embedding_pipeline('/path/to/music')
+>>> results = milvus.search(collection_name='music_recognition', query_records=query_embeddings, top_k=10, params={'nprobe': 16})
 ```
 
 ### Resources
 
-In the music recognition system, audio fingerprints can be extracted through a Towhee pipeline. We provide a list of different music embedding pipelines [here](pipelines/music-embedding).
+In the music recognition system, audio fingerprints can be extracted through a Towhee pipeline. We provide a list of different music embedding pipelines [here](https://hub.towhee.io/pipelines).
