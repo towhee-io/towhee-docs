@@ -12,7 +12,7 @@ In this short tutorial, you can try Towhee for yourself in this browser-based sc
 
 <KatacodaBtn /><br />
 
- 
+
 
 Clicking on any of the code snippets below will automatically paste the contents of the snippet into the terminal you just launched. Once you close this page, the environment that you just spun up along with all of its contents will be wiped clean.
 
@@ -21,25 +21,33 @@ Clicking on any of the code snippets below will automatically paste the contents
 The browser-based terminal you just brought up is a completely clean environment, so we'll need to install Towhee first:
 (click the following command, it will be copied to the terminal)
 
-<KatacodaBlock>
-  pip3.7 install -i https://test.pypi.org/simple/ --extra-index-url
-  https://pypi.org/simple towhee==0.3.1.dev19
-</KatacodaBlock>
+Download the source code from github.
+
+<KatacodaBlock>git clone https://github.com/towhee-io/towhee.git</KatacodaBlock>
+
+Go into the towhee directory.
+
+<KatacodaBlock>cd towhee</KatacodaBlock>
+
+Install towhee with latest codes.
+
+<KatacodaBlock>python3 setup.py install</KatacodaBlock>
 
 ### Some prep work
 
 Once that's done, let's get started with a bit of prep work. Download our Towhee logo (or any other image); we'll use this to generate an embedding vector:
 
-<KatacodaBlock>
-  wget
-  https://github.com/towhee-io/towhee-docs/raw/main/docs/get-started/logo.png
-</KatacodaBlock>
+<KatacodaBlock>cd ../</KatacodaBlock>
+
+Download the test image.
+
+<KatacodaBlock>wget https://github.com/towhee-io/towhee-docs/raw/main/static/img/logo.png</KatacodaBlock>
 
 ### Running your first pipeline
 
 Now it's time to generate your first embedding with Towhee! Open up a `python` terminal:
 
-<KatacodaBlock>python3.7</KatacodaBlock>
+<KatacodaBlock>python3</KatacodaBlock>
 
 Data transformations are central to Towhee; Pipelines are simply a series of transformations connected together in a directed acyclic graph. All pre-built Towhee pipelines are given names that are representative of the task at hand. To create a pipeline, import the `pipeline` function from the `towhee`:
 
