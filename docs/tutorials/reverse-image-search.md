@@ -43,8 +43,9 @@ In order to achieve a wonderful reverse image search system, effective search to
 [Milvus](http://milvus.io) is an open source vector database that can achieve millisecond-level responses over hundreds of millions of vectors. It contains a variety of options for indices and similarity metrics, which can meet the various computing needs of users.
 
 ```python
->>>
->>>
+>>> from milvus import Milvus
+>>> milvus = Milvus(host='localhost', port='19530')
+>>> results = milvus.search(collection_name='reverse_image_search', query_records=query_embeddings, top_k=10, params={'nprobe': 16})
 ```
 
 ### Putting it all together
@@ -58,7 +59,11 @@ As mentioned in the previous section, a reverse image search system consists of 
 The following code snippet will allows you to implement a reverse image search system using Towhee:
 
 ```python
->>>
+>>> from towhee import pipeline
+>>> from milvus import Milvus
+>>> embedding_pipeline = pipeline('image-embedding')
+>>> query_embeddings = embedding_pipeline('/path/to/img')
+>>> results = milvus.search(collection_name='reverse_image_search', query_records=query_embeddings, top_k=10, params={'nprobe': 16})
 ```
 
 ![img](reverse_image_search.png)
