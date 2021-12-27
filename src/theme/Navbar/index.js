@@ -254,11 +254,11 @@ function Navbar() {
         <div className="navbar__items navbar__items--right">
           <div className="navbar__item-github-star">
             <GitHubButton
-              href="https://github.com/ntkme/github-buttons"
+              href="https://github.com/towhee-io/towhee"
               data-icon="octicon-star"
               data-size="large"
               data-show-count="true"
-              aria-label="Star ntkme/github-buttons on GitHub">
+              aria-label="Star towhee-io/towhee on GitHub">
               Star
             </GitHubButton>
           </div>
