@@ -28,10 +28,10 @@ const sidebars = {
       ],
     },
     {
-      Tutorials: [
-        'tutorials/image-deduplication',
-        'tutorials/music-recognition-system',
-        'tutorials/reverse-image-search',
+      Solutions: [
+        'solutions/image-deduplication',
+        'solutions/music-recognition-system',
+        'solutions/reverse-image-search',
       ],
     },
     {

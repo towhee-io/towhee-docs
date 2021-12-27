@@ -48,7 +48,7 @@ In order to achieve a wonderful reverse image search system, effective search to
 >>> results = milvus.search(collection_name='reverse_image_search', query_records=query_embeddings, top_k=10, params={'nprobe': 16})
 ```
 
-> Note that this step assumes that Milvus (and its Python bindings) is already installed and that vectors have already been added into the database. For more information on the installation and insert process, please visit the [Milvus docs](https://milvus.io/docs/v1.1.1/install_milvus.md).
+Note that this step assumes that Milvus (and its Python bindings) is already installed and that vectors have already been added into the database. For more information on the installation and insert process, please visit the [Milvus docs](https://milvus.io/docs/v1.1.1/install_milvus.md).
 
 ### Putting it all together
 
