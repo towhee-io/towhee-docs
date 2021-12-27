@@ -7,8 +7,8 @@ Image embedding pipelines are used for reduction the dimensionality of the input
 
 ### Popular Scenarios
 
-- [Reverse image search](../tutorials/reverse-image-search)
-- [Image deduplication](../tutorials/image-deduplication)
+- [Reverse image search](../solutions/reverse-image-search)
+- [Image deduplication](../solutions/image-deduplication)
 - Copyright infringement detection
 - Item tagging
 - Celebrity tagging
@@ -27,7 +27,7 @@ These are the pipelines containing pre-trained EfficientNet models implemented b
 
 **[image-embedding-efficientnetb7](https://hub.towhee.io/towhee/image-embedding-efficientnetb7)**
 
-These are the pipelines containing pre-trained ViT (vision transformer)  implemented based on this [paper](https://arxiv.org/pdf/2010.11929.pdf):
+These are the pipelines containing pre-trained ViT (vision transformer) implemented based on this [paper](https://arxiv.org/pdf/2010.11929.pdf):
 
 **[image-embedding-vitlarge](https://hub.towhee.io/towhee/image-embedding-vitlarge)**
 
