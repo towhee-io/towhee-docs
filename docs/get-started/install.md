@@ -14,7 +14,7 @@ If you're a conda user, you can install Towhee as follows:
 ```shell
 $ conda create -n towhee_env python=3.6  # create a conda environment for Towhee
 $ conda activate towhee_env  # activate your newly created conda environment
-$ conda install towhee  # install Towhee
+$ conda install -c towhee-io towhee   # install Towhee via the `towhee-io` channel
 ```
 
 ### Install Towhee with pip
