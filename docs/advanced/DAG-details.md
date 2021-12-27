@@ -13,7 +13,7 @@ All the representations are inherited from a base representation class called `B
 
 Towhee provides several ways of loading the representations. Users can either load the components either from a YAML file(both local file and remote file) or a YAML file pre-loaded as a string.
 
-Towhee will automatically check the validity of the given information. All the components have some must-have information. If users want to contribute their own pipelines or operators, please refer to [YAML Example](https://zilliverse.feishu.cn/docs/doccn3wy3s2CN1WExXkcIKuCXYe#YAML Example).
+Towhee will automatically check the validity of the given information. All the components have some must-have information. If users want to contribute their own pipelines or operators, please refer to [YAML example](https://hub.towhee.io/towhee/image-embedding-pipeline-template/src/branch/main/image_embedding_pipeline_template.yaml).
 
 **GraphRepr**
 
