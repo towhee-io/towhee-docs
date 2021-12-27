@@ -37,7 +37,9 @@ These are the pipelines containing pre-trained Swin Transformers implemented bas
 
 **[image-embedding-swinlarge](https://hub.towhee.io/towhee/image-embedding-swinlarge)**
 
-More on the way ...
+Each pipeline mentioned above employs a single model. In contrast, an ensemble combines multiple models to generate a better embedding, at the cost of higher resource consumption. Towhee offers image embedding pipelines based on emsembles:
+
+**[image-embedding-efficientnetb7-swinlarge-concat](https://hub.towhee.io/towhee/image-embedding-efficientnetb7-swinlarge-concat)**
 
 ### Pipeline family
 
