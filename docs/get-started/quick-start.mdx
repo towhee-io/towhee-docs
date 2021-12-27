@@ -25,45 +25,47 @@ Download the source code from github.
 
 <KatacodaBlock>git clone https://github.com/towhee-io/towhee.git</KatacodaBlock>
 
+
 Go into the towhee directory.
 
-<KatacodaBlock>cd towhee</KatacodaBlock>
+<KatacodaBlock>cd towhee</KatacodaBlock><br />
 
 Install towhee with latest codes.
 
-<KatacodaBlock>python3 setup.py install</KatacodaBlock>
+<KatacodaBlock>python3 setup.py install</KatacodaBlock><br />
+
 
 ### Some prep work
 
 Once that's done, let's get started with a bit of prep work. Download our Towhee logo (or any other image); we'll use this to generate an embedding vector:
 
-<KatacodaBlock>cd ../</KatacodaBlock>
+<KatacodaBlock>cd ../</KatacodaBlock><br />
 
 Download the test image.
 
-<KatacodaBlock>wget https://github.com/towhee-io/towhee-docs/raw/main/static/img/logo.png</KatacodaBlock>
+<KatacodaBlock>wget https://github.com/towhee-io/towhee-docs/raw/main/static/img/logo.png</KatacodaBlock><br />
 
 ### Running your first pipeline
 
 Now it's time to generate your first embedding with Towhee! Open up a `python` terminal:
 
-<KatacodaBlock>python3</KatacodaBlock>
+<KatacodaBlock>python3</KatacodaBlock><br />
 
 Data transformations are central to Towhee; Pipelines are simply a series of transformations connected together in a directed acyclic graph. All pre-built Towhee pipelines are given names that are representative of the task at hand. To create a pipeline, import the `pipeline` function from the `towhee`:
 
-<KatacodaBlock>from towhee import pipeline</KatacodaBlock>
+<KatacodaBlock>from towhee import pipeline</KatacodaBlock><br />
 
 Now let's instantiate an image embedding pipeline:
 
-<KatacodaBlock>embedding_pipeline = pipeline('image-embedding')</KatacodaBlock>
+<KatacodaBlock>embedding_pipeline = pipeline('image-embedding')</KatacodaBlock><br />
 
 And then pass the image we just downloaded through the pipeline:
 
-<KatacodaBlock>output = embedding_pipeline('towhee_logo.png')</KatacodaBlock>
+<KatacodaBlock>output = embedding_pipeline('logo.png')</KatacodaBlock>
 
 That's it! The embedding vector for the corresponding input image (`towhee_logo.png`) is stored in the `output` variable:
 
-<KatacodaBlock>print(output)</KatacodaBlock>
+<KatacodaBlock>print(output)</KatacodaBlock><br />
 
 ### Other pipelines
 
@@ -73,11 +75,11 @@ We can also try a different image embedding pipeline instead of the default one.
 
 <KatacodaBlock>
   embedding_pipeline = pipeline('image-embedding-resnet101')
-</KatacodaBlock>
+</KatacodaBlock><br />
 
 This automatically loads the pipeline located at `towhee/image-embedding-resnet101` on the Towhee hub.
 
-<KatacodaBlock>quit()</KatacodaBlock>
+<KatacodaBlock>quit()</KatacodaBlock><br />
 
 ### Try more pipelines
 
