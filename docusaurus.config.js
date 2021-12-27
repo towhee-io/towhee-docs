@@ -50,17 +50,33 @@ const config = {
           href: "https://towhee.io/",
         },
         items: [
-          // {
-          //   type: 'doc',
-          //   docId: '/',
-          //   position: 'left',
-          //   label: 'quick start',
-          // },
           {
-            href: "https://github.com/towhee-io/towhee",
-            label: "GitHub",
+            href: "https://hub.towhee.io/pipelines",
+            label: 'Pipelines',
             position: "right",
+            className: "header-link"
           },
+          {
+            href: "https://hub.towhee.io/operators",
+            label: "Operators",
+            position: "right",
+            className: "header-link"
+          }, {
+            href: "/",
+            label: "Documentation",
+            position: "right",
+            className: "header-link"
+          }, {
+            href: "https://hub.towhee.io/user/login",
+            label: "Sign in",
+            className: "header-outline-button",
+            position: "right"
+          }
+          // {
+          //   href: "https://github.com/towhee-io/towhee",
+          //   label: "GitHub",
+          //   position: "right",
+          // },
         ],
       },
       footer: {
