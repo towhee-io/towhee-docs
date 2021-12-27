@@ -44,7 +44,7 @@ That's it! The embedding vector for the corresponding input image (`towhee_logo.
 
 Note that the default model used by `image-embedding` is `Resnet50` (you can find the corresponding mapping for default pipelines [here](https://github.com/towhee-io/towhee/blob/main/towhee/__init__.py#L25)). The default repository for this pipeline is located on the [Towhee hub](https://hub.towhee.io/towhee/image-embedding-resnet50); following the link will take you to a README page describing the pipeline, the model(s) used, and a simple diagram explaining how data flows through the pipeline.
 
-We can also try a different image embedding pipeline instead of the default one. Towhee provides a way to directly call a pipeline repository on the Towhee hub: <KatacodaBlock>embedding_pipeline = pipeline('image-embedding-resnet101')</KatacodaBlock>
+We can also try a different image embedding pipeline instead of the default one. Towhee provides a way to directly call a pipeline repository on the Towhee hub: <KatacodaBlock>embedding_pipeline = pipeline('towhee/image-embedding-resnet101')</KatacodaBlock>
 
 This automatically loads the pipeline located at `towhee/image-embedding-resnet101` on the Towhee hub.
 
