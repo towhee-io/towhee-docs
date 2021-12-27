@@ -53,19 +53,23 @@ const config = {
           {
             href: "https://hub.towhee.io/pipelines",
             label: 'Pipelines',
-            position: "right"
+            position: "right",
+            className: "header-link"
           },
           {
             href: "https://hub.towhee.io/operators",
             label: "Operators",
-            position: "right"
+            position: "right",
+            className: "header-link"
           }, {
             href: "/",
             label: "Documentation",
-            position: "right"
+            position: "right",
+            className: "header-link"
           }, {
             href: "https://hub.towhee.io/user/login",
             label: "Sign in",
+            className: "header-outline-button",
             position: "right"
           }
           // {

@@ -26,6 +26,8 @@ import IconMenu from '@theme/IconMenu';
 import IconClose from '@theme/IconClose';
 import styles from './styles.module.css'; // retrocompatible with v1
 
+import GitHubButton from 'react-github-btn';
+
 const DefaultNavItemPosition = 'right';
 
 function useNavbarItems() {
@@ -250,6 +252,17 @@ function Navbar() {
           ))}
         </div>
         <div className="navbar__items navbar__items--right">
+          <div className="navbar__item-github-star">
+            <GitHubButton
+              href="https://github.com/ntkme/github-buttons"
+              data-icon="octicon-star"
+              data-size="large"
+              data-show-count="true"
+              aria-label="Star ntkme/github-buttons on GitHub">
+              Star
+            </GitHubButton>
+          </div>
+
           {rightItems.map((item, i) => (
             <NavbarItem {...item} key={i} />
           ))}
