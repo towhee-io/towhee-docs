@@ -1,15 +1,10 @@
 import React from 'react';
+import CodeBlock from '@theme/CodeBlock';
 
-const katacodaShellBlock = (props) => {
+const KatacodaShellBlock = (props) => {
   const {children} = props;
 
-  return (
-    <div>
-      <code className="language-shell" data-lang="shell">
-        {children}
-      </code>
-    </div>
-  );
+  return <CodeBlock className="language-shell">{children}</CodeBlock>;
 };
 
-export default katacodaShellBlock;
+export default KatacodaShellBlock;
