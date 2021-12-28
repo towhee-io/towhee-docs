@@ -51,13 +51,13 @@ const config = {
         },
         items: [
           {
-            href: "https://hub.towhee.io/pipelines",
+            href: "https://towhee.io/pipelines",
             label: 'Pipelines',
             position: "right",
             className: "header-link"
           },
           {
-            href: "https://hub.towhee.io/operators",
+            href: "https://towhee.io/operators",
             label: "Operators",
             position: "right",
             className: "header-link"
@@ -67,7 +67,7 @@ const config = {
             position: "right",
             className: "header-link"
           }, {
-            href: "https://hub.towhee.io/user/login",
+            href: "https://towhee.io/user/login",
             label: "Sign in",
             className: "header-outline-button",
             position: "right"
