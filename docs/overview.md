@@ -41,11 +41,11 @@ To accomplish this, we built Towhee atop popular machine learning and unstructur
 
 - [Quick Start](get-started/quick-start): install Towhee and try your first pipeline
 
-#### Solutions:
+#### Tutorials:
 
-- [Reverse image search](solutions/reverse-image-search): search for similar or related images
-- [Image deduplication](solutions/image-deduplication): detect and remove identical or near-identical photos
-- [Music recognition](solutions/music-recognition-system): music identification with full-length song or a snippet
+- [Reverse image search](tutorials/reverse-image-search): search for similar or related images
+- [Image deduplication](tutorials/image-deduplication): detect and remove identical or near-identical photos
+- [Music recognition](tutorials/music-recognition-system): music identification with full-length song or a snippet
 
 #### Supported pipelines:
 

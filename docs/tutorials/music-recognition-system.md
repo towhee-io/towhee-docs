@@ -17,7 +17,7 @@ Neural network based music embedding solutions often require the input audio to 
 
 ##### Encoder-based embedding model
 
-The embedding model is used to convert audio into embeddings. Music recognition requires a model that is invariant to changes in pitch and noise, making an encoder-based model an obvious candidate (our [image deduplication application](solutions/image-deduplication) also uses such a model). Towhee makes it incredibly easy to compute audio embeddings, given transformed data:
+The embedding model is used to convert audio into embeddings. Music recognition requires a model that is invariant to changes in pitch and noise, making an encoder-based model an obvious candidate (our [image deduplication application](tutorials/image-deduplication) also uses such a model). Towhee makes it incredibly easy to compute audio embeddings, given transformed data:
 
 ```python
 >>> from towhee import pipeline
