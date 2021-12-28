@@ -80,41 +80,30 @@ const config = {
         ],
       },
       footer: {
-        style: "dark",
+        logo: {
+          alt: "Towhee logo",
+          src: "img/logo.png",
+          href: "https://towhee.io/",
+        },
         links: [
           {
-            title: "Docs",
-            items: [
-              {
-                label: "Quick Start",
-                to: "/get-started/quick-start",
-              },
-            ],
+            label: "Contribute",
+            href: "https://github.com/towhee-io/towhee"
           },
           {
-            title: "Community",
-            items: [
-              {
-                label: "Slack",
-                href: "https://slack.towhee.io",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/towheeio",
-              },
-            ],
+            label: "Pipelines",
+            href: "https://towhee.io/pipelines",
           },
           {
-            title: "More",
-            items: [
-              {
-                label: "GitHub",
-                href: "https://github.com/towhee-io/towhee",
-              },
-            ],
+            label: "Operators",
+            href: "https://towhee.io/operators"
           },
+          {
+            label: "Documentation",
+            to: "/"
+          }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Towhee. Built with Docusaurus.`,
+        copyright: `© Towhee.${new Date().getFullYear()} All rights reserved.`,
       },
       prism: {
         theme: lightCodeTheme,
