@@ -6,6 +6,7 @@
   color: #fff;
   padding: 16px;
   border-radius: 4px;
+  font-weight: bold;
 }
 
 .button:hover {

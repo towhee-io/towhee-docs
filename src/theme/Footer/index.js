@@ -14,6 +14,11 @@ import styles from './styles.module.css';
 import ThemedImage from '@theme/ThemedImage';
 import IconExternalLink from '@theme/IconExternalLink';
 
+import SlackIcon from '@site/static/img/icons/icon-slack.svg';
+import TwitterIcon from '@site/static/img/icons/icon-twitter.svg';
+import GithubIcon from '@site/static/img/icons/icon-github.svg';
+import Rectangle from '@site/static/img/icons/rectangle.svg';
+
 function FooterLink({to, href, label, prependBaseUrlToHref, ...props}) {
   const toUrl = useBaseUrl(to);
   const normalizedHref = useBaseUrl(href, {
@@ -33,7 +38,7 @@ function FooterLink({to, href, label, prependBaseUrlToHref, ...props}) {
       {href && !isInternalUrl(href) ? (
         <span>
           {label}
-          <IconExternalLink />
+          {/* <IconExternalLink /> */}
         </span>
       ) : (
         label
@@ -86,7 +91,7 @@ function MultiColumnLinks({links}) {
 
 function SimpleLinks({links}) {
   return (
-    <div className="footer__links">
+    <div className="footer__links simple-links">
       {links.map((item, key) => (
         <>
           {item.html ? (
@@ -101,9 +106,9 @@ function SimpleLinks({links}) {
           ) : (
             <FooterLink {...item} />
           )}
-          {links.length !== key + 1 && (
+          {/* {links.length !== key + 1 && (
             <span className="footer__link-separator">·</span>
-          )}
+          )} */}
         </>
       ))}
     </div>
@@ -131,47 +136,88 @@ function Footer() {
       className={clsx('footer', {
         'footer--dark': footer.style === 'dark',
       })}>
-      <div className="container container-fluid">
-        {links &&
-          links.length > 0 &&
-          (isMultiColumnFooterLinks(links) ? (
-            <div className="row footer__links">
-              <MultiColumnLinks links={links} />
-            </div>
-          ) : (
-            <div className="footer__links text--center">
-              <SimpleLinks links={links} />
-            </div>
-          ))}
-        {(logo || copyright) && (
-          <div className="footer__bottom text--center">
-            {logo && (logo.src || logo.srcDark) && (
-              <div className="margin-bottom--sm">
-                {logo.href ? (
-                  <Link href={logo.href} className={styles.footerLogoLink}>
-                    <FooterLogo
-                      alt={logo.alt}
-                      sources={sources}
-                      width={logo.width}
-                      height={logo.height}
-                    />
-                  </Link>
-                ) : (
-                  <FooterLogo alt={logo.alt} sources={sources} />
-                )}
-              </div>
+      <div className="footer__content-top">
+        {logo && (logo.src || logo.srcDark) && (
+          <div className="margin-bottom--sm">
+            {logo.href ? (
+              <Link href={logo.href} className={styles.footerLogoLink}>
+                <FooterLogo
+                  alt={logo.alt}
+                  sources={sources}
+                  width={logo.width}
+                  height={logo.height}
+                />
+              </Link>
+            ) : (
+              <FooterLogo alt={logo.alt} sources={sources} />
             )}
-            {copyright ? (
-              <div
-                className="footer__copyright" // Developer provided the HTML, so assume it's safe.
-                // eslint-disable-next-line react/no-danger
-                dangerouslySetInnerHTML={{
-                  __html: copyright,
-                }}
-              />
-            ) : null}
           </div>
         )}
+
+        <div className="container container-fluid navs-desktop">
+          {links &&
+            links.length > 0 &&
+            (isMultiColumnFooterLinks(links) ? (
+              <div className="row footer__links">
+                <MultiColumnLinks links={links} />
+              </div>
+            ) : (
+              <div className="footer__links text--center">
+                <SimpleLinks links={links} />
+              </div>
+            ))}
+        </div>
+
+        <ul class="socials">
+          <li>
+            <a href="https://slack.towhee.io" target="_blank">
+              <SlackIcon title="Slack logo" className="social-icon" />
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/towheeio" target="_blank">
+              <TwitterIcon title="Twitter logo" className="social-icon" />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/towhee-io/towhee" target="_blank">
+              <GithubIcon title="Github logo" className="social-icon" />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div className="footer__content-bottom">
+        <div className="container container-fluid navs-mobile">
+          {links &&
+            links.length > 0 &&
+            (isMultiColumnFooterLinks(links) ? (
+              <div className="row footer__links">
+                <MultiColumnLinks links={links} />
+              </div>
+            ) : (
+              <div className="footer__links text--center">
+                <SimpleLinks links={links} />
+              </div>
+            ))}
+        </div>
+        <div className="copyright-section">
+          <Rectangle className="rectangle" />
+          <Rectangle className="rectangle rectangle-2" />
+          {copyright && (
+            <div className="footer__bottom text--center">
+              {copyright ? (
+                <div
+                  className="footer__copyright" // Developer provided the HTML, so assume it's safe.
+                  // eslint-disable-next-line react/no-danger
+                  dangerouslySetInnerHTML={{
+                    __html: copyright,
+                  }}
+                />
+              ) : null}
+            </div>
+          )}
+        </div>
       </div>
     </footer>
   );

@@ -51,13 +51,13 @@ const config = {
         },
         items: [
           {
-            href: "https://hub.towhee.io/pipelines",
+            href: "https://towhee.io/pipelines",
             label: 'Pipelines',
             position: "right",
             className: "header-link"
           },
           {
-            href: "https://hub.towhee.io/operators",
+            href: "https://towhee.io/operators",
             label: "Operators",
             position: "right",
             className: "header-link"
@@ -67,7 +67,7 @@ const config = {
             position: "right",
             className: "header-link"
           }, {
-            href: "https://hub.towhee.io/user/login",
+            href: "https://towhee.io/user/login",
             label: "Sign in",
             className: "header-outline-button",
             position: "right"
@@ -80,41 +80,30 @@ const config = {
         ],
       },
       footer: {
-        style: "dark",
+        logo: {
+          alt: "Towhee logo",
+          src: "img/logo.png",
+          href: "https://towhee.io/",
+        },
         links: [
           {
-            title: "Docs",
-            items: [
-              {
-                label: "Quick Start",
-                to: "/get-started/quick-start",
-              },
-            ],
+            label: "Contribute",
+            href: "https://github.com/towhee-io/towhee"
           },
           {
-            title: "Community",
-            items: [
-              {
-                label: "Slack",
-                href: "https://slack.towhee.io",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/towheeio",
-              },
-            ],
+            label: "Pipelines",
+            href: "https://towhee.io/pipelines",
           },
           {
-            title: "More",
-            items: [
-              {
-                label: "GitHub",
-                href: "https://github.com/towhee-io/towhee",
-              },
-            ],
+            label: "Operators",
+            href: "https://towhee.io/operators"
           },
+          {
+            label: "Documentation",
+            to: "/"
+          }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Towhee. Built with Docusaurus.`,
+        copyright: `© Towhee.${new Date().getFullYear()} All rights reserved.`,
       },
       prism: {
         theme: lightCodeTheme,

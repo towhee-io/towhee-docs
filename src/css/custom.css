@@ -27,6 +27,8 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+/* custom styls config */
+/* custom header */
 .header-link {
   font-weight: bold;
   margin-right: 16px;
@@ -36,7 +38,7 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   font-weight: bold;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 996px) {
   .header-outline-button {
     padding: 8px 16px !important;
     border: 1px solid #010e29;
@@ -53,4 +55,159 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 .navbar__item-github-star {
   margin-top: 8px;
   margin-right: 16px;
+}
+
+.navbar__logo {
+  height: 20px;
+}
+
+@media screen and (min-width: 996px) {
+  .navbar__logo {
+    height: 32px;
+  }
+}
+
+/* custom markdown */
+
+.theme-doc-markdown h1:first-child {
+  font-size: 40px;
+}
+
+/* custom footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #fff;
+  border-top: 1px solid #c2c8d0;
+  padding: 16px 16px 0 16px;
+}
+
+.footer .socials {
+  display: flex;
+}
+
+.footer .socials li {
+  list-style-type: none;
+}
+
+.footer .social-icon path {
+  fill: #010e29;
+}
+
+.social-icon:hover path {
+  fill: #25c2a0;
+}
+
+.footer__logo {
+  margin-top: 8px;
+  height: 20px;
+}
+
+.footer__links {
+  margin-bottom: 0;
+  text-align: start;
+}
+
+.footer__link-item {
+  font-weight: bold;
+  margin-right: 16px;
+  padding: 8px 16px;
+  color: #1c1e21;
+}
+
+.footer__content-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__content-top .container {
+  flex-grow: 1;
+}
+
+.footer__content-top .navs-desktop {
+  display: none;
+}
+
+.footer .socials {
+  margin-bottom: 0;
+}
+
+.footer .socials li {
+  margin-left: 16px;
+}
+
+.footer__content-bottom {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+
+.footer__content-bottom .copyright-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.copyright-section .rectangle {
+  width: 59px;
+  height: 59px;
+}
+
+.footer__copyright {
+  margin-bottom: 0;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.rectangle-2 path {
+  fill: #1aabfd;
+}
+
+.navs-mobile {
+  padding: 0;
+}
+
+.navs-mobile .simple-links {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 144px;
+}
+
+@media screen and (min-width: 996px) {
+  .footer__logo {
+    height: 32px;
+  }
+
+  .footer__content-top .navs-desktop {
+    display: block;
+  }
+
+  .footer__content-bottom .navs-mobile {
+    display: none;
+  }
+
+  .footer__content-bottom {
+    flex-direction: row;
+  }
+
+  .footer-links {
+    margin-left: 20px;
+  }
+
+  .footer__content-bottom .copyright-section {
+    flex-grow: 1;
+  }
+
+  .copyright-section .rectangle {
+    width: 148px;
+    height: 148px;
+  }
+
+  .footer__copyright {
+    margin-bottom: 36px;
+    margin-left: 16px;
+  }
 }
