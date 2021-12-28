@@ -47,16 +47,20 @@ const sidebars = {
       ],
     },*/
     {
-      Advanced: [
-        'advanced/contributing-guide',
-        'advanced/architectural-overview',
-        'advanced/DAG-details',
-        'advanced/engine-details',
-        'advanced/layer-details',
-        'advanced/hub-integration-and-caching',
-        'advanced/image-ensemble-training',
-        //'advanced/roadmap',
-      ],
+      DeveloperGuides: {
+        Contributing: [
+          'developer-guides/contributing/contributing-guide',
+        ],
+        Framework: [
+          'developer-guides/contributing/architectural-overview',
+          'developer-guides/contributing/DAG-details',
+          'developer-guides/contributing/engine-details',
+          'developer-guides/contributing/layer-details',
+          'developer-guides/contributing/hub-integration-and-caching',
+          'developer-guides/contributing/image-ensemble-training',
+        ],
+       //'advanced/roadmap',
+      },
     },
   ],
 };
