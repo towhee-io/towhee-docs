@@ -47,20 +47,22 @@ const sidebars = {
       ],
     },*/
     {
-      DeveloperGuides: {
-        Contributing: [
-          'developer-guides/contributing/contributing-guide',
-        ],
-        Framework: [
-          'developer-guides/contributing/architectural-overview',
-          'developer-guides/contributing/DAG-details',
-          'developer-guides/contributing/engine-details',
-          'developer-guides/contributing/layer-details',
-          'developer-guides/contributing/hub-integration-and-caching',
-          'developer-guides/contributing/image-ensemble-training',
-        ],
-       //'advanced/roadmap',
-      },
+      'Developer guides': [
+        {
+          Contributing: ['developer-guides/contributing/contributing-guide'],
+        },
+        {
+          Framework: [
+            'developer-guides/framework/architectural-overview',
+            'developer-guides/framework/DAG-details',
+            'developer-guides/framework/engine-details',
+            'developer-guides/framework/layer-details',
+            'developer-guides/framework/hub-integration-and-caching',
+            'developer-guides/framework/image-ensemble-training',
+          ],
+        },
+      ],
+      //'advanced/roadmap',
     },
   ],
 };
