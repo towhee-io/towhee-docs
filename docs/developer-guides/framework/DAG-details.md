@@ -3,7 +3,7 @@ id: DAG-details
 title: Architecture part I - DAG
 ---
 
-In Towhee, each pipeline will be stored as a DAG (directed acyclic graph) in which each node represents an operator. Towhee's engine will execute the operators according to the DAG. Towhee builds a series of representations to illustrate the pipeline.
+In Towhee, each pipeline is stored as a DAG (directed acyclic graph) in which each node represents an operator. Towhee's engine will execute the operators according to the DAG. Towhee builds a series of representations to illustrate the pipeline.
 
 ### Representations
 
@@ -11,7 +11,7 @@ In Towhee, each pipeline will be stored as a DAG (directed acyclic graph) in whi
 
 All the representations are inherited from a base representation class called `BaseRepr`, which covers some mutual functions such as load and verification.
 
-Towhee provides several ways of loading the representations. Users can either load the components either from a YAML file(both local file and remote file) or a YAML file pre-loaded as a string.
+Towhee provides several ways of loading the representations. Users can either load the components from a YAML file(both local file and remote file) or a YAML file pre-loaded as a string.
 
 Towhee will automatically check the validity of the given information. All the components have some must-have information. If users want to contribute their own pipelines or operators, please refer to [YAML example](https://hub.towhee.io/towhee/image-embedding-pipeline-template/src/branch/main/image_embedding_pipeline_template.yaml).
 
@@ -19,9 +19,9 @@ Towhee will automatically check the validity of the given information. All the c
 
 `GraphRepr` is the representation of a DAG(pipeline) in Towhee. A graph can be represented by its nodes(operators) and edges(dataframes). Therefore a `GraphRepr` has two attributes `_operators`(a dict of `OperatorRepr`)and `_dataframes`(a dict of `DataFrameRepr`).
 
-When generating a `GraphRepr` from a YAML, Towhee will do some static check to check the validity of the YAML file, such as loop detection and isolation detection. Note that we do not allow loops or isolations in the graph.
+When generating a `GraphRepr` from a YAML, Towhee will do some static checks to check the validity of the YAML file, such as loop detection and isolation detection. Note that we do not allow loops or isolations in the graph.
 
-Generating a `GraphrRepr` is actually loading the operator and dataframe information from the given YAML file and putting into `_operators` and `_dataframes`.
+Generating a `GraphrRepr` requires loading the operator and dataframe information from the given YAML file and putting into `_operators` and `_dataframes`.
 
 **OperatorRepr**
 
@@ -41,7 +41,7 @@ An operator is the unit to process the input data in a Towhee pipeline. When cre
 
 - Iter_info: the way of processing input data.
 
-- Framework: optional, if the operator is neural network related and based on some machine learning framworks, users can specify which framework to use. Towhee use pytroch in default.
+- Framework: optional, if the operator is neural network related and based on some machine learning framworks, users can specify which framework to use. Towhee uses pytorch by default.
 
 **DataFrameRepr**
 
@@ -49,9 +49,9 @@ The `DataFrameRepr` is the representation of the data that flows in the pipeline
 
 **YAML**
 
-The YAML is the file to illustrate and generate the pipeline. In current stage, pipeline contributors have to write their own YAML files according to our template. However in the coming future, Towhee will provides APIs for users to generate the YAML.
+The YAML is the file to illustrate and generate the pipeline. In the current stage of development, pipeline contributors have to write their own YAML files according to our template. However in the coming future, Towhee will provides APIs for users to generate the YAML.
 
-Basically a correct YAML file consists of pipeline name, operators, dataframes.
+Basically a correct YAML file consists of pipeline name, operators, and dataframes.
 
 - Name: the name of the pipeline, in Towhee, pipelines are distinguished by their authors and names, which means one author cannot create two pipelines with the same name.
 
@@ -59,7 +59,7 @@ Basically a correct YAML file consists of pipeline name, operators, dataframes.
 
   - All the pipelines should have two operators `_start_op` and `_end_op`. They do not perform any functionality, but are the sign of start and end of the pipeline.
 
-  - Make sure the operators exists either in the local cache or Towhee's hub.
+  - Make sure the operators exist either in the local cache or Towhee's hub.
 
 - Dataframes: the information of dataframes in this pipeline, including name, column name, column type.
 
