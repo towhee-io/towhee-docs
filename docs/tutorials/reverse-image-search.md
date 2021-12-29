@@ -72,4 +72,4 @@ The following code snippet will allows you to implement a reverse image search s
 
 ### Resources
 
-In the reverse image search system, image feature extraction can be achieved through a Towhee pipeline such as [`image-embedding-resnet50`](https://hub.towhee.io/towhee/image-embedding-resnet50). Please visit [this page](pipelines/image-embedding) a full list of image embedding pipelines Towhee supports.
+In the reverse image search system, image feature extraction can be achieved through a Towhee pipeline such as [`image-embedding-resnet50`](https://towhee.io/towhee/image-embedding-resnet50). Please visit [this page](https://towhee.io/pipelines?filter=3%3Aimage-embedding) a full list of image embedding pipelines Towhee supports.
