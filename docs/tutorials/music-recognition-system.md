@@ -59,4 +59,4 @@ During querying, the audio be searched for is preprocessed and embedded in the s
 
 ### Resources
 
-In the music recognition system, audio fingerprints can be extracted through a Towhee pipeline. We provide a list of different music embedding pipelines [here](https://hub.towhee.io/pipelines).
+In the music recognition system, audio fingerprints can be extracted through a Towhee pipeline. We provide a list of different music embedding pipelines [here](https://towhee.io/pipelines).
