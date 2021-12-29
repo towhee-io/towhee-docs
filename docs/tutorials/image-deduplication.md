@@ -23,13 +23,13 @@ To accomplish this, these encoder models shouldn't be trained on traditional ima
 
 ```python
 >>> from towhee import pipeline
->>> embedding_pipeline = pipeline('image-encoder')  # instantiate the pipeline
+>>> embedding_pipeline = pipeline('image-encoding')  # instantiate the pipeline
 
 >>> img0_embedding = embedding_pipeline('/path/to/img0')  # compute embedding for image 0
 >>> img1_embedding = embedding_pipeline('/path/to/img1')  # compute embedding for image 1
 ```
 
-Unlike the pre-built `image-embedding` pipeline which is trained with categorical cross-entropy on ImageNet labels, the `image-encoder` model is trained to output extremely close embeddings for two "similar" input images, i.e. zero, one, or many of the following transformations:
+Unlike the pre-built `image-embedding` pipeline which is trained with categorical cross-entropy on ImageNet labels, the `image-encoding` model is trained to output extremely close embeddings for two "similar" input images, i.e. zero, one, or many of the following transformations:
 
 1. Color conversion, e.g. changes in lighting/contrast
 2. Up to 150% zoom plus a random crop
@@ -57,7 +57,7 @@ Putting it all together, we can check if two images are duplicate with the follo
 >>> from towhee import pipeline
 >>> import numpy as np
 
->>> embedding_pipeline = pipeline('image-encoder')
+>>> embedding_pipeline = pipeline('image-encoding')
 >>> img0_embedding = embedding_pipeline('/path/to/img0')
 >>> img1_embedding = embedding_pipeline('/path/to/img1')
 

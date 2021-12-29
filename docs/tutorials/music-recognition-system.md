@@ -21,7 +21,7 @@ The embedding model is used to convert audio into embeddings. Music recognition 
 
 ```python
 >>> from towhee import pipeline
->>> embedding_pipeline = pipeline('music-encoder')  # instantiate the pipeline
+>>> embedding_pipeline = pipeline('music-encoding')  # instantiate the pipeline
 >>> query_embeddings = embedding_pipeline('/path/to/music')
 ```
 
@@ -47,12 +47,12 @@ A music recognition system generally transforms audio data to embeddings and com
 
 The above picture is a brief system architecture of a music recognition system based on Towhee and Milvus. It transforms audio data into vectors with a Towhee audio embedding pipeline and then inserts all the vectors into Milvus. Since Milvus does not yet support string data, the 1-to-1 mappings between audio files and embedding vectors are stored in an auxiliary relational database.
 
-During querying, the audio be searched for is preprocessed and embedded in the same pipeline as the already inserted data. The output vector IDs for the search are then fed into the relational database (MySQL), which returns the file locations of the closest-matching audio files. 
+During querying, the audio be searched for is preprocessed and embedded in the same pipeline as the already inserted data. The output vector IDs for the search are then fed into the relational database (MySQL), which returns the file locations of the closest-matching audio files.
 
 ```python
 >>> from towhee import pipeline
 >>> from milvus import Milvus
->>> embedding_pipeline = pipeline('music-encoder')
+>>> embedding_pipeline = pipeline('music-encoding')
 >>> query_embeddings = embedding_pipeline('/path/to/music')
 >>> results = milvus.search(collection_name='music_recognition', query_records=query_embeddings, top_k=10, params={'nprobe': 16})
 ```
