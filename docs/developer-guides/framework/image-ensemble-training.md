@@ -3,13 +3,11 @@ id: image-ensemble-training
 title: Image ensemble training
 ---
 
-Towhee provides ensemble pipelines for ensemble learning, which utilizes multi ML models to jointly solve problems like classification, image retrieval and so on. Besides, grid search and fusion model training solutions are included in towhee, letting developers to focus on strategy design.
+Towhee provides ensemble pipelines for ensemble learning, which utilize multiple models to jointly solve problems like classification, image retrieval and so on. In addition to this, grid search and fusion model training solutions are included in Towhee, allowing developers to spend more time focussing on overall system design.
 
-In a future version, multi-modal fusion will be released to richify the tools for embedding fusion.
+In the future, a multi-modal fusion will be released to help improve the tools used embedding fusion.
 
-Example embedding ensemble for embedding based image retrieval on Imagenet2012 dataset
-
-When we used only one model to extract the embedding vector to make the image retrieval, we got the best result(0.6034 mAP@50) in the 4 single models. When we concated embeddings from different models with different weights, we got a better result(0.6161 mAP@50), which made a 1.3% improvement compared to former. This result shows that the embedding ensemble method does improve the retrieval result compared to single model.
+Why would someone use an ensemble? We tested an image embedding ensemble for image retrieval on the Imagenet2012 dataset. When we used one model to extract embedding vectors, we got a best result of (0.6034 mAP@50) out of the 4 models we tested. When we concated the embeddings from the four different models, we got a better result of (0.6161 mAP@50), a 1.3% improvement. This result shows that the embedding ensemble method does improve the retrieval result compared to a single model.
 
 ### Imagenet dataset ensemble experiments
 
@@ -17,7 +15,7 @@ When we used only one model to extract the embedding vector to make the image re
 
 **Evaluation Metric**: mAP@50(ImageNet val dataset has 50 images for each class)
 
-**Evaluation Methodology**: for every image in ImageNet val dataset, return a sorted list(size 51) for most similar images in the same dataset, calculate the metric score for later 50 (the first should be the query image itself). The retrievaled image tagged same label with queried image would be considered positive, and others would be considered negative.
+**Evaluation Methodology**: for every image in the ImageNet val dataset, return a sorted list(size 51) for most similar images in the dataset, calculate the metric score for the 50 closest images (first in list ignored as it is the query image). In this test, the images tagged with the same labels as the queried image would be considered positive, and the others would be considered negative.
 
 ### Single model experiments
 
