@@ -37,7 +37,7 @@ const sidebars = {
     {
       'Supported pipelines': [
         'pipelines/image-embedding',
-        'pipelines/music-embedding',
+        'pipelines/audio-embedding',
       ],
     },
     /*{
