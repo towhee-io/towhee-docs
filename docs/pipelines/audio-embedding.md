@@ -1,6 +1,6 @@
 ---
-id: music-embedding
-title: Music embedding pipelines
+id: audio-embedding
+title: Audio embedding pipelines
 ---
 
 Audio describes human-hearable sound, which is normally recorded and transmitted via sound files in formats such as MP3 or WAV. Audio embedding is the process of converting audio files into vector representations. Here, we list some of our built-in pipelines for generating _music_ embeddings.
