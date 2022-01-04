@@ -50,7 +50,7 @@ To accomplish this, we built Towhee atop popular machine learning and unstructur
 #### Supported pipelines:
 
 - [Image embedding pipelines](pipelines/image-embedding)
-- [Audio embedding pipelines](pipelines/music-embedding)
+- [Audio embedding pipelines](pipelines/audio-embedding)
 
 #### Supported operators:
 

@@ -10,7 +10,7 @@ A large part of what makes Towhee unique compared to other pipelining software i
 
 **Implementation**
 
-Towhee's hub is built on the Gitea.  
+Towhee hub is deployed on a Gitea server. Gitea is an open-source, self-hosted git service. More information about Gitea can be found [here](https://gitea.io/en-us/).
 
 
 **Integration**

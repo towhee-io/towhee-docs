@@ -1,8 +1,6 @@
 ---
 id: reverse-image-search
 title: Reverse image search
-author: shiyu22
-profile: 
 ---
 
 This tutorial can run as [jupyter notebook](https://jupyter.org/install), you can refer to [reverse_image_search.jupyter](https://github.com/towhee-io/towhee/blob/main/towhee/tutorials/reverse_image_search.ipynb). Have fun with it!
