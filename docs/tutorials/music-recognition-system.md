@@ -32,7 +32,7 @@ In the upcoming sections, we will first walk you through some of the prep work f
 
 ## Preparation
 
-In this step, we will download the image dataset, install [Towhee](https://towhee.io/), and setup [Milvus](https://milvus.io/), an open source vector database.
+In this step, we will download the music dataset, install [Towhee](https://towhee.io/), and setup [Milvus](https://milvus.io/), an open source vector database.
 
 ### Download dataset
 
@@ -54,7 +54,7 @@ The folder `data` downloaded contains two directories - `music_dataset` for the 
 
 ### Install Towhee
 
-We'll use `pip` in this tutorial. We also support installing Towhee via `conda` as well as from source; check out [this page](https://towhee.io/get-started/install) for more information.
+We'll use `pip` in this tutorial. We also support installing Towhee via `conda` as well as from source; check out [this page](https://docs.towhee.io/get-started/install) for more information.
 
 ```bash
 $ pip3 install towhee
@@ -85,9 +85,9 @@ $ pip3 install pymilvus==2.0.0rc9
 
 ### 1. Model and pipeline selection
 
-The first step in building a music recognition system is selecting an appropriate embedding model and one of its associated pipelines. Within Towhee, all pipelines can be found on the [Towhee hub](https://towhee.io/pipelines). Clicking on any of the categories on the right hand side of the page will filter the results based on the specified task; selecting the `audio-embedding` category will reveal all image embedding pipelines that Towhee offers. We also provide a summary of popular image embedding pipelines [here](https://docs.towhee.io/pipelines/music-embedding).
+The first step in building a music recognition system is selecting an appropriate embedding model and one of its associated pipelines. Within Towhee, all pipelines can be found on the [Towhee hub](https://towhee.io/pipelines). Clicking on any of the categories on the right hand side of the page will filter the results based on the specified task; selecting the `audio-embedding` category will reveal all audio embedding pipelines that Towhee offers. We also provide a summary of popular audio embedding pipelines [here](https://docs.towhee.io/pipelines/audio-embedding).
 
-Resource requirments, accuracy, inference latency are key trade-offs when selecting a proper pipeline. Towhee provides a multitude of pipelines to meet various application demands. For demonstration purposes, we will be using VGGish ([audio-embedding-vggish](https://towhee.io/towhee/audio-embedding-vggish)) in this tutorial.
+Resource requirements, accuracy, inference latency are key trade-offs when selecting a proper pipeline. Towhee provides a multitude of pipelines to meet various application demands. For demonstration purposes, we will be using VGGish ([audio-embedding-vggish](https://towhee.io/towhee/audio-embedding-vggish)) in this tutorial.
 
 ```python
 from towhee import pipeline
@@ -117,7 +117,7 @@ Model is loaded.
 
 ### 3. Insert all generated embedding vectors into a vector database
 
-While brute-force computation of distances between queries and all audio vectors is perfectly fine for small datasets, scaling to billions of image dataset items requires a production-grade vector database that utilizes a search index to greatly speed up the query process. Here, we'll insert vectors computed in the previous section into a Milvus collection.
+While brute-force computation of distances between queries and all audio vectors is perfectly fine for small datasets, scaling to billions of audio dataset items requires a production-grade vector database that utilizes a search index to greatly speed up the query process. Here, we'll insert vectors computed in the previous section into a Milvus collection.
 
 ```python
 import pymilvus as milvus
@@ -143,7 +143,7 @@ collection = milvus.Collection(name=collection_name, schema=schema)
 # insert data to Milvus
 res = collection.insert([vectors])
 
-# maintain mappings between primary keys and the original images for image retrieval
+# maintain mappings between primary keys of music clips and the original music for retrieval
 full_music_list = []
 music_dict = dict()
 for i in range(len(vec_sets)):
@@ -168,7 +168,7 @@ results = collection.search(data=norm_query_vecs, anns_field="vec", param={"metr
 
 #### Display result
 
-Vector ids returned by Milvus are then fed into the dictonary, which returns the corresponding paths of the closest-matching audio files in storage. These query results will vote for the final identification of the input audio.
+Vector ids returned by Milvus are then fed into the dictionary, which returns the corresponding paths of the closest-matching audio files in storage. These query results will vote for the final identification of the input audio.
 
 ```python
 import IPython
