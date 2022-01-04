@@ -59,4 +59,3 @@ To accomplish this, we built Towhee atop popular machine learning and unstructur
 - Github: https://github.com/towhee-io/towhee
 - Slack: https://slack.towhee.io
 - Twitter: https://twitter.com/towheeio
-- Github: https://github.com/towhee-io/towhee
