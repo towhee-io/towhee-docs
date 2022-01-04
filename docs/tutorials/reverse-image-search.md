@@ -55,7 +55,7 @@ The downloaded data contains two directories - `dataset` for the image dataset a
 
 ### Install Towhee
 
-We'll use `pip` in this tutorial. We also support installing Towhee via `conda` as well as from source; check out [this page](https://towhee.io/get-started/install) for more information.
+We'll use `pip` in this tutorial. We also support installing Towhee via `conda` as well as from source; check out [this page](https://docs.towhee.io/get-started/install) for more information.
 
 ```bash
 $ pip3 install towhee
@@ -69,7 +69,7 @@ We'll be using `docker-compose` to install Milvus standalone. Before installing 
 
 ```bash
 # download the latest docker-compose file
-$ wget https://github.com/milvus-io/milvus/releases/download/v2.0.0-rc8/milvus-standalone-docker-compose.yml -O docker-compose.yml
+$ wget https://github.com/milvus-io/milvus/releases/download/v2.0.0-pre-ga/milvus-standalone-docker-compose.yml -O docker-compose.yml
 # start the Milvus service
 $ docker-compose up -d
 # check the state of the containers
@@ -79,7 +79,7 @@ $ docker-compose ps
 We will also need to install Python bindings for Milvus.
 
 ```bash
-$ pip3 install pymilvus==2.0.0rc8
+$ pip3 install pymilvus==2.0.0rc9
 ```
 
 ## Steps in Python
@@ -88,7 +88,7 @@ $ pip3 install pymilvus==2.0.0rc8
 
 The first step in building a reverse image search system is selecting an appropriate embedding model and one of its associated pipelines. Within Towhee, all pipelines can be found on the [Towhee hub](https://towhee.io/pipelines). Clicking on any of the categories on the right hand side of the page will filter the results based on the specified task; selecting the `image-embedding` category will reveal all image embedding pipelines that Towhee offers. We also provide a summary of popular image embedding pipelines [here](https://docs.towhee.io/pipelines/image-embedding).
 
-Resource requirments, accuracy, inference latency are key trade-offs when selecting a proper pipeline. Towhee provides a multitude of pipelines to meet various application demands. The current state-of-the-art embedding pipelines are ensemble pipelines that include multiple models (our [best ensemble](https://towhee.io/towhee/image-embedding-3ways-ensemble-v1) combines the Swin Transformer with EfficientNet and Resnet-101). These pipelines are fairly computational expensive. In contrast, if a slightly less "accurate" but much faster pipeline is okay for your application, we recommend EfficientNet ([image-embedding-efficientnetb7](https://towhee.io/towhee/image-embedding-efficientnetb7)). For demonstration purposes, we will be using Resnet-50 ([image-embedding-resnet50](https://towhee.io/towhee/image-embedding-resnet50)) in this tutorial.
+Resource requirements, accuracy, inference latency are key trade-offs when selecting a proper pipeline. Towhee provides a multitude of pipelines to meet various application demands. The current state-of-the-art embedding pipelines are ensemble pipelines that include multiple models (our [best ensemble](https://towhee.io/towhee/image-embedding-3ways-ensemble-v1) combines the Swin Transformer with EfficientNet and Resnet-101). These pipelines are fairly computational expensive. In contrast, if a slightly less "accurate" but much faster pipeline is okay for your application, we recommend EfficientNet ([image-embedding-efficientnetb7](https://towhee.io/towhee/image-embedding-efficientnetb7)). For demonstration purposes, we will be using Resnet-50 ([image-embedding-resnet50](https://towhee.io/towhee/image-embedding-resnet50)) in this tutorial.
 
 ```python
 from towhee import pipeline
