@@ -29,7 +29,7 @@ To accomplish this, we built Towhee atop popular machine learning and unstructur
 
 ### Design philosophy
 
-- **Convenient**: Towhee pipelines can be created to implement a variety of embedding tasks. Any pipeline creations or embedding tasks can be done in no more than 10 lines of code. We provide a number of pre-built pipelines on our [hub](https://hub.towhee.io).
+- **Convenient**: Towhee pipelines can be created to implement a variety of embedding tasks. Any pipeline creations or embedding tasks can be done in no more than 10 lines of code. We provide a number of pre-built pipelines on our [hub](https://towhee.io/pipelines?limit=30&page=1).
 
 - **Extensible**: Individual operators have standard interfaces, and can be reconfigured/reused in different pipelines. Pipelines can be deployed anywhere you want - on your local machine, on a server with 4 GPUs, or even in the cloud.
 

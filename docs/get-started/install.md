@@ -24,8 +24,8 @@ As with `conda`, we highly recommend first activating a [virtual environment](ht
 ```shell
 $ python3 -m venv towhee_env  # create a virtual environment
 $ source towhee_env/bin/activate  # activate your newly created virtual environment
-$ pip install -U pip  # we recommend updating pip first before installing Towhee
-$ pip install towhee==0.4.0  # install Towhee
+$ pip3 install -U pip  # we recommend updating pip first before installing Towhee
+$ pip3 install towhee==0.4.0  # install Towhee
 ```
 
 Alternatively, if you are on Windows, install Python 3.6+ first, either through the Windows Store or through one of the [official releases](https://www.python.org/downloads/windows). You can then install Towhee as follows:
@@ -33,7 +33,7 @@ Alternatively, if you are on Windows, install Python 3.6+ first, either through 
 ```console
 c:\> python -m venv towhee_env
 c:\> source towhee_env/Scripts/Activate
-c:\> pip install towhee==0.4.0
+c:\> pip3 install towhee==0.4.0
 ```
 
 ### Install Towhee from source
