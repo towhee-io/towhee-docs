@@ -13,7 +13,7 @@ To accomplish this, we built Towhee atop popular machine learning and unstructur
 
 ### Problems Towhee solves
 
-- **An embedding pipeline is far more than a single neural network.** Think about embedding items from a given video. Such embedding process will involve video decompression, key-frame extraction, frame deduplication, object detection, cropping, encoding, etc. For industrial practice, this necessitates a platform that offers end-to-end embedding pipeline solutions, as well as supporting data parallesim and resource management.
+- **An embedding pipeline is far more than a single neural network.** Think about embedding items from a given video. Such embedding process will involve video decompression, key-frame extraction, frame deduplication, object detection, cropping, encoding, etc. For industrial practice, this necessitates a platform that offers end-to-end embedding pipeline solutions, as well as supporting data parallelism and resource management.
 
   Towhee solves this problem by reintroducing the concept of `Pipeline` as being _application-centric_ instead of _model-centric_. Where model-centric pipelines are composed of a single model followed by auxiliary code, application-centric pipelines treat every single data processing steps as first class citizens.
 
