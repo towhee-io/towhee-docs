@@ -37,6 +37,8 @@ Once Towhee is installed, let's move onto a bit of prep work. Download our Towhe
   https://github.com/towhee-io/towhee-docs/raw/main/docs/get-started/towhee.jpeg
 </KatacodaBlock>
 
+We can skip this step if we want to use url to find the image, Towhee support both ways.
+
 ### Running your first pipeline
 
 Now it's time to generate your first embedding with Towhee! Open up a `python` terminal:
@@ -51,9 +53,15 @@ Now let's instantiate an image embedding pipeline:
 
 <KatacodaBlock>embedding_pipeline = pipeline('image-embedding')</KatacodaBlock>
 
-And then pass the image we just downloaded through the pipeline:
+Towhee allow users to specify the image both by local directory and remote url.
+
+If we have downloaded the Towhee logo in the previous prep step:
 
 <KatacodaBlock>output = embedding_pipeline('towhee.jpeg')</KatacodaBlock>
+
+Or we can just use the url:
+
+<KatacodaBlock>output = embedding_pipeline('https://github.com/towhee-io/towhee-docs/raw/main/docs/get-started/towhee.jpeg')</KatacodaBlock>
 
 That's it! The embedding vector for the corresponding input image (`towhee.jpeg`) is stored in the `output` variable:
 
