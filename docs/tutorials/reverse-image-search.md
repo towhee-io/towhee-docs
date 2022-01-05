@@ -3,7 +3,7 @@ id: reverse-image-search
 title: Reverse image search
 ---
 
-This tutorial can run as [jupyter notebook](https://jupyter.org/install), you can refer to [reverse_image_search.jupyter](https://github.com/towhee-io/towhee/blob/main/towhee/tutorials/reverse_image_search.ipynb). Have fun with it!
+This tutorial can run as [jupyter notebook](https://jupyter.org/install), you can refer to [reverse_image_search.jupyter](https://github.com/towhee-io/towhee/blob/main/tutorials/reverse_image_search.ipynb). Have fun with it!
 
 ## Scenario introduction
 
@@ -172,7 +172,7 @@ from PIL import Image
 for i in range(len(query_results)):
     results = query_results[i]
     query_file = query_images[i]
-    
+
     result_files = [img_dict[result.id] for result in results]
     distances = [result.distance for result in results]
 
