@@ -3,7 +3,7 @@ id: music-recognition-system
 title: Music recognition
 ---
 
-You can download the [music_recognition_tutorial.ipynb](https://github.com/towhee-io/towhee/blob/main/towhee/tutorials/music_recognition_tutorial.ipynb) and run it at local with [jupyter notebook](https://jupyter.org/install).
+You can download the [music_recognition_tutorial.ipynb](https://github.com/towhee-io/towhee/blob/main/tutorials/music_recognition_tutorial.ipynb) and run it at local with [jupyter notebook](https://jupyter.org/install).
 
 ## Scenario Introduction
 
