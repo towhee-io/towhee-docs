@@ -3,7 +3,7 @@ id: hub-integration-and-caching
 title: Hub integration and caching
 ---
 
-A large part of what makes Towhee unique compared to other pipelining software is its emphasis on open source and integration with its own hub. Towhee hub allows for sharing and contributing to pipelines and operators that cover a wide range of use cases, ultimately allowing everyone to further their applications together. Lets go over how the hub works and how we ultimatey integrate it into the framework. 
+A large part of what makes Towhee unique compared to other pipelining software is its emphasis on open source and integration with its own hub. Towhee hub allows for sharing and contributing to pipelines and operators that cover a wide range of use cases, ultimately allowing everyone to further their applications together. Lets go over how the hub works and how we ultimately integrate it into the framework. 
 
 
 ### Towhee Hub
@@ -29,7 +29,7 @@ Authorized requests require that you have login credentials setup with our hub. 
 
 ## Caching
 
-Caching was a complicated issue to solve with Towhee due to the fact that pipelines and operators might be stored in many different locations. Someone might want to deploy a locally saved pipeline that uses a hub based operator and two operators that are stored locally in seperate locations. We solved this problem using a FileManager paired with a FileManagerConfig.
+Caching was a complicated issue to solve with Towhee due to the fact that pipelines and operators might be stored in many different locations. Someone might want to deploy a locally saved pipeline that uses a hub based operator and two operators that are stored locally in separate locations. We solved this problem using a FileManager paired with a FileManagerConfig.
 
 **FileManagerConfig**
 
