@@ -13,11 +13,11 @@ A music recognition system generally transforms audio data to embeddings and com
 
 ## Tutorial Overview
 
-Normally an audio embedding pipeline generates a set of embeddings given an audio path, which composes a unique fingerprint representing the input music. Each embedding corresponds to features extracted for a snippet of the input audio. By comparing embeddings of audio snippets, the system can determine the similarity between audios. The image below explains the music fingerprinting by audio embeddings.
+Normally an audio embedding pipeline generates a set of embeddings given an audio path, which composes a unique fingerprint representing the input music. The model selected in the pipeline reads the audio file as a tensor and splits it into shorter tensors of fixed length. These shorter tensors are then taken as an input batch and embeddings are returned for each corresponding input tensor. Each embedding represents features extracted for a snippet of the input audio. By comparing the embeddings of these audio snippets, the system can determine the similarity between separate audio. The image below shows the process of music fingerprinting by audio embeddings.
 
 ![music_embedding](music_embedding.png)
 
-A block diagram for a basic music recognition system is shown in images below. The first image illustrates how the system transforms a music dataset to vectors with Towhee and then inserts all vectors into Milvus. The second image shows the querying process of an unknown music snippet.
+A block diagram for a basic music recognition system is shown in the images below. The first image illustrates how the system transforms a music dataset into vectors with Towhee and then inserts all vectors into Milvus. The second image shows the querying process of an unknown music snippet. The system begins by using the same pipeline for music dataset fingerprinting to generate a batch of vectors to represent the input music snippet. With this batch, it retrieves the primary key of the closest vector in the database for each vector in the batch. With these results, the audio file that has the most matched keys will be the closest match as the final result.
 
 ![music_recog_system](music_recog_system.png)
 
@@ -46,7 +46,7 @@ Here we will use `gdown` to download and unzip the data from Google Drive.
 
 ```bash
 $ pip3 install gdown
-$ gdown 'https://drive.google.com/uc?id=1SSwEXOnG6c_F2NjcqYTsIM65zVCLpbOr'
+$ gdown 'https://drive.google.com/uc?id=1gHF8HDzXxeSy8bhtaTVueRFVPdj6ZEZJ'
 $ unzip -q music_dataset.zip
 ```
 
