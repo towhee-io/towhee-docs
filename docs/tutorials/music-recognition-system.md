@@ -111,8 +111,6 @@ for audio_path in music_list:
     vecs = embedding_pipeline(str(audio_path))
     norm_vecs = [vec / np.linalg.norm(vec) for vec in vecs[0][0]]
     vec_sets.append(norm_vecs)
-Loading model...
-Model is loaded.
 ```
 
 ### 3. Insert all generated embedding vectors into a vector database
