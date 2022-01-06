@@ -64,10 +64,10 @@ $ pytest tests/unittests/<test_case>.py
 $ git rebase -i HEAD~N
 ```
 
-P.S. Don't forget to commit your changes! We use a single-phrase, periodless format for commit messages (be sure to capitalize the first character):
+P.S. Don't forget to commit your changes! We use a single-phrase, periodless format for commit messages (be sure to capitalize the first character). We also sign off all of our commits - you can read more about this [here](https://dlorenc.medium.com/should-you-sign-git-commits-f068b07e1b1f).
 
 ```bash
-$ git commit -m "My awesome commit message"
+$ git commit -sm "My awesome commit message"
 ```
 
 6. Submit your pull request on Github. Folks in the community will discuss your pull request, and maintainers might ask you for some changes. This happens very frequently (including maintainers themselves), so don't worry if it happens to you as well.
