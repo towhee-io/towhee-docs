@@ -1,0 +1,3 @@
+[submodule "towhee"]
+	path = towhee
+	url = https://github.com/towhee-io/towhee
