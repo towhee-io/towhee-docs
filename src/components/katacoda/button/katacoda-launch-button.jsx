@@ -4,7 +4,11 @@ import styles from './button.module.css';
 
 const KatacodaBtn = () => {
   const handleBtnClick = () => {
+    // open terminal
     window.katacoda && window.katacoda.init();
+    // add more bottom margin for this page
+    const container = document.querySelector('.container');
+    container.style.marginBottom = '140px';
   };
 
   useEffect(() => {
