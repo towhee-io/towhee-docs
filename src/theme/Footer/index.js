@@ -93,7 +93,7 @@ function SimpleLinks({links}) {
   return (
     <div className="footer__links simple-links">
       {links.map((item, key) => (
-        <div key={key}>
+        <span key={key}>
           {item.html ? (
             <span
               className="footer__link-item" // Developer provided the HTML, so assume it's safe.
@@ -108,7 +108,7 @@ function SimpleLinks({links}) {
           {/* {links.length !== key + 1 && (
             <span className="footer__link-separator">·</span>
           )} */}
-        </div>
+        </span>
       ))}
     </div>
   );
