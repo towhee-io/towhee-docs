@@ -93,10 +93,9 @@ function SimpleLinks({links}) {
   return (
     <div className="footer__links simple-links">
       {links.map((item, key) => (
-        <>
+        <div key={key}>
           {item.html ? (
             <span
-              key={key}
               className="footer__link-item" // Developer provided the HTML, so assume it's safe.
               // eslint-disable-next-line react/no-danger
               dangerouslySetInnerHTML={{
@@ -109,7 +108,7 @@ function SimpleLinks({links}) {
           {/* {links.length !== key + 1 && (
             <span className="footer__link-separator">·</span>
           )} */}
-        </>
+        </div>
       ))}
     </div>
   );
@@ -168,7 +167,7 @@ function Footer() {
             ))}
         </div>
 
-        <ul class="socials">
+        <ul className="socials">
           <li>
             <a href="https://slack.towhee.io" target="_blank">
               <SlackIcon title="Slack logo" className="social-icon" />
