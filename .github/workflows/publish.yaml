@@ -20,6 +20,9 @@ jobs:
           git submodule init
           git submodule update --remote
 
+      - name: Update dependencies
+        run: yarn install
+
       - name: Setup website by docs content
         run: node setup.js
 
