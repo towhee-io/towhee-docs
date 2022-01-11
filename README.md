@@ -1,6 +1,6 @@
 # Towhee docs and its website
 
-This repo contains the website configuration and documentation powering the Towhee docs website.
+This repo contains the website configuration powering the Towhee docs website.
 
 ## 🚀 Getting started
 
@@ -16,31 +16,42 @@ This repo contains the website configuration and documentation powering the Towh
 
 ### Running locally
 
-1.  `yarn start` to start the development server _(powered by [Docusaurus](https://v2.docusaurus.io))_.
+1.  `yarn start` to fetch doc content from submodule and start the development server _(powered by [Docusaurus](https://v2.docusaurus.io))_.
 2.  `open http://localhost:3000/` to open the site in your favorite browser.
 
 ## 👏 Contributing
 
 ### Update docs
 
-- All our documentation is generated from markdown files you can find in the `docs` directory. If the program is already running locally, everytime you change the file, you can visit `http://localhost:3000/YOUR-DOCS-PAGE` to see your work.
+- All our documentation is generated from markdown files you can find in the [`towhee-io/towhee`](https://github.com/towhee-io/towhee) repository's `docs` directory.
 
 - Add a new doc
 
-  1. Create a new markdown file and put it under the `docs` directory
+  1. Create a new markdown file and put it under `towhee-io/towhee` repository's `docs` directory
   2. At the top of file, specify `id` and `title` in the front matter. `title` will be default sidebar label, you can set `sidebar_label` to overwrite it.
+  3. If you want to add authors in the doc, you can set `authors` object in the front matter as following example
 
   ```
   ---
     id: first-pipeline
     title: Running your first pipeline
     sidebar_label: Hello pipeline
+    authors:
+        - name: Joel Marcey
+          # show as description (optional)
+          title: Co-creator of Docusaurus 1
+          url: https://github.com/JoelMarcey
+          # show on the left (optional)
+          imageURL: https://github.com/JoelMarcey.png
+        - name: Sébastien Lorber
+          url: https://sebastienlorber.com
+          imageURL: https://github.com/slorber.png
   ---
   ```
 
 - Update sidebar
 
-  1. Take a look at the `sidebar.js` file
+  1. Take a look at the `sidebar.js` file in `docs`
   2. In `sidebars` object, `doc` represents menus on the left which is listed in order, you can switch item's position to change order.
   3. If you want to add a new nested menu, just push a new key-value pair to `doc` list. If you just want to add a new link, you only need to insert that markdown's `id` to the list.
 
