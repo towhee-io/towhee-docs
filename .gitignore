@@ -5,3 +5,7 @@ node_modules
 .docusaurus
 
 build/
+
+# docs content
+docs/
+sidebars.js
