@@ -86,9 +86,15 @@ export default function DocItem(props) {
                 See https://github.com/facebook/docusaurus/pull/4882#issuecomment-853021120
                 */}
                 {shouldAddTitle && <MainHeading>{title}</MainHeading>}
+
                 {/* use authors component in blog template */}
                 {authors && authors.length > 0 && (
-                  <BlogPostAuthors authors={authors} assets={assets} />
+                  <>
+                    <h5>Authors:</h5>
+                    <BlogPostAuthors authors={authors} assets={assets} />
+                    {/* divider */}
+                    <div className={styles.divider}></div>
+                  </>
                 )}
                 <DocContent />
               </div>
