@@ -113,8 +113,6 @@ const config = {
       colorMode: {
         disableSwitch: true,
       },
-      // add trailing slashes to URLs/links
-      trailingSlash: true
     }),
 };
 
