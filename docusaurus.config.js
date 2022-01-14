@@ -117,6 +117,11 @@ const config = {
       colorMode: {
         disableSwitch: true,
       },
+      algolia: {
+        appId: 'MR5ISYQ0LO',
+        apiKey: 'c863e83aa6f9ecb1392f8ac07ace5510',
+        indexName: 'docs-towhee',
+      },
     }),
 };
 

@@ -273,7 +273,11 @@ function Navbar() {
               onChange={colorModeToggle.toggle}
             />
           )}
-          {!hasSearchNavbarItem && <SearchBar />}
+          {!hasSearchNavbarItem && (
+            <div className="navbar__item-search-wrapper">
+              <SearchBar />
+            </div>
+          )}
         </div>
       </div>
 
