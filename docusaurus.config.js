@@ -13,8 +13,12 @@ const config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "Towhee", // Usually your GitHub org/user name.
-  projectName: "towhee-docs", // Usually your repo name.
+  organizationName: "Towhee",
+  projectName: "towhee-docs",
+
+  // add trailing slashes to URLs/links
+  // so that seo or search crawler won't fail because of http redirect issues 
+  trailingSlash: true,
 
   presets: [
     [
