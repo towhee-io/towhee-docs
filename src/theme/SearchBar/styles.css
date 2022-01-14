@@ -30,3 +30,7 @@
 .DocSearch-Button-Keys {
   display: none;
 }
+
+.DocSearch-HitsFooter * {
+  display: none;
+}
