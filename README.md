@@ -1,3 +1,7 @@
+**THIS REPOSITORY IS ARCHIVED**
+
+All documentation has been moved to the [main Towhee repo](https://github.com/towhee-io/towhee/tree/main/docs).
+
 # Towhee docs and its website
 
 This repo contains the website configuration powering the Towhee docs website.
