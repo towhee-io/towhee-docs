@@ -54,20 +54,25 @@ const config = {
           href: "https://towhee.io/",
         },
         items: [
+          // {
+          //   href: "https://towhee.io/pipelines",
+          //   label: 'Pipelines',
+          //   position: "right",
+          //   className: "header-link"
+          // },
           {
-            href: "https://towhee.io/pipelines",
-            label: 'Pipelines',
-            position: "right",
-            className: "header-link"
-          },
-          {
-            href: "https://towhee.io/operators",
+            href: "https://towhee.io/tasks/operator",
             label: "Operators",
             position: "right",
             className: "header-link"
           }, {
             href: "/",
             label: "Documentation",
+            position: "right",
+            className: "header-link"
+          }, {
+            href: "https://codelabs.towhee.io/",
+            label: "Bootcamp",
             position: "right",
             className: "header-link"
           }, {
@@ -94,17 +99,21 @@ const config = {
             label: "Contribute",
             href: "https://github.com/towhee-io/towhee"
           },
-          {
-            label: "Pipelines",
-            href: "https://towhee.io/pipelines",
-          },
+          // {
+          //   label: "Pipelines",
+          //   href: "https://towhee.io/pipelines",
+          // },
           {
             label: "Operators",
-            href: "https://towhee.io/operators"
+            href: "https://towhee.io/tasks/operator"
           },
           {
             label: "Documentation",
             to: "/"
+          },
+          {
+            label: 'Bootcamp',
+            href: "https://codelabs.towhee.io/",
           }
         ],
         copyright: `© Towhee.${new Date().getFullYear()} All rights reserved.`,
