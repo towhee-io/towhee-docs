@@ -26,7 +26,8 @@ import IconMenu from '@theme/IconMenu';
 import IconClose from '@theme/IconClose';
 import styles from './styles.module.css'; // retrocompatible with v1
 
-import GitHubButton from 'react-github-btn';
+import {Octokit} from '@octokit/core';
+import GitHubButton from '../../components/github/GithubButton';
 
 const DefaultNavItemPosition = 'right';
 
@@ -219,6 +220,28 @@ function Navbar() {
   const items = useNavbarItems();
   const hasSearchNavbarItem = items.some((item) => item.type === 'search');
   const {leftItems, rightItems} = splitNavItemsByPosition(items);
+
+  const [githubStats, setGithubStats] = useState({stars: 0, forks: 0});
+
+  useEffect(() => {
+    const fetchRepoInfo = async () => {
+      const octokit = new Octokit();
+
+      const {data} = await octokit.request('GET /repos/{owner}/{repo}', {
+        owner: 'towhee-io',
+        repo: 'towhee',
+      });
+
+      const {stargazers_count: stars, forks_count: forks} = data;
+      setGithubStats({
+        stars,
+        forks,
+      });
+    };
+
+    fetchRepoInfo();
+  }, []);
+
   return (
     <nav
       ref={navbarRef}
@@ -253,12 +276,19 @@ function Navbar() {
         </div>
         <div className="navbar__items navbar__items--right">
           <div className="navbar__item-github-star">
-            <GitHubButton
+            {/* <GitHubButton
               href="https://github.com/towhee-io/towhee"
               data-icon="octicon-star"
               data-size="large"
               data-show-count="true"
               aria-label="Star towhee-io/towhee on GitHub">
+              Star
+            </GitHubButton> */}
+
+            <GitHubButton
+              githubStats={githubStats}
+              type="star"
+              href="https://github.com/towhee-io/towhee">
               Star
             </GitHubButton>
           </div>
