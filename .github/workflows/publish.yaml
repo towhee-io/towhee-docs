@@ -5,7 +5,6 @@ on:
   push:
     branches:
       - main
-      - publish
 
 jobs:
   build:
@@ -41,24 +40,18 @@ jobs:
           echo $tag
           echo "::set-output name=docker_tag::$tag"
 
-      - name: Build and push image to Harbor
+      - name: Build and push image to Dockerhub
         id: build-image
         run: |
           docker build "$GITHUB_WORKSPACE/" -f "Dockerfile" -t towhee/towhee-docs:${{ steps.generate-tag-name.outputs.docker_tag }}
           docker push towhee/towhee-docs:${{ steps.generate-tag-name.outputs.docker_tag }}
 
-      # - name: Deploy to cluster
-      #   run: |
-      #     echo ${{ secrets.kubeconfig }} > config64
-      #     base64 -d config64 > kubeconfig
-      #     kubectl set image deployment/towhee-docs towhee-docs=harbor-us1.zilliz.cc/towhee/towhee-docs:${{ steps.generate-tag-name.outputs.docker_tag }} -n towhee --kubeconfig=kubeconfig
   deploy:
-    runs-on: ubuntu-latest
-    # runs-on: ued-self-hosted
+    runs-on: ued-self-hosted
     needs: build
     steps:   
       - name: Deploy to cluster
         run: |
           echo ${{ secrets.kubeconfig }} > config64
           base64 -d config64 > kubeconfig
-          echo "${{ needs.build.outputs.docker-image-tag }}"
+          kubectl set image deployment/towhee-docs towhee-docs=towhee/towhee-docs:${{ needs.build.outputs.docker-image-tag }} -n towhee --kubeconfig=kubeconfig
