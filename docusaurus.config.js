@@ -70,12 +70,14 @@ const config = {
             label: "Documentation",
             position: "right",
             className: "header-link"
-          }, {
-            href: "https://codelabs.towhee.io/",
-            label: "Bootcamp",
-            position: "right",
-            className: "header-link"
-          }, {
+          }, 
+          // {
+          //   href: "https://codelabs.towhee.io/",
+          //   label: "Bootcamp",
+          //   position: "right",
+          //   className: "header-link"
+          // }, 
+          {
             href: "https://towhee.io/user/login",
             label: "Sign in",
             className: "header-outline-button",
@@ -111,10 +113,10 @@ const config = {
             label: "Documentation",
             to: "/"
           },
-          {
-            label: 'Bootcamp',
-            href: "https://codelabs.towhee.io/",
-          }
+          // {
+          //   label: 'Bootcamp',
+          //   href: "https://codelabs.towhee.io/",
+          // }
         ],
         copyright: `© Towhee.${new Date().getFullYear()} All rights reserved.`,
       },
