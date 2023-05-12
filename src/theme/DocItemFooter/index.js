@@ -5,17 +5,12 @@
  * LICENSE file in the root directory of this source tree.
  */
 import React, {useEffect, useState} from 'react';
-import {Octokit} from '@octokit/core';
 import clsx from 'clsx';
 import LastUpdated from '@theme/LastUpdated';
 import EditThisPage from '@theme/EditThisPage';
 import TagsListInline from '@theme/TagsListInline';
 import styles from './styles.module.css';
 import {ThemeClassNames} from '@docusaurus/theme-common';
-
-// github access token for getting commit history for doc pages
-const GET_COMMIT_TOKEN =
-  'Z2hwX2o1UVN3MzR4UTZqWTM4ZjZkRmtCUHR1Q0hoZ3U2cjN5RHduTQ==';
 
 /**
  * function to get filter path for github commit api
@@ -84,17 +79,13 @@ const ContributorList = ({source}) => {
     // fetch github commit info for this page
     const fetchGithubCommits = async (source) => {
       const path = getPathFromSource(source);
-      const auth = atob(GET_COMMIT_TOKEN);
-      const octokit = new Octokit({auth});
-
-      const {data} = await octokit.request(
-        'GET /repos/{owner}/{repo}/commits',
-        {
-          owner: 'towhee-io',
-          repo: 'towhee',
-          path,
-        },
+      const response = await fetch(
+        `https://mservice.zilliz.com/doc-commits?fullName=towhee-io/towhee&path=${path}`,
       );
+
+      const {
+        body: {data},
+      } = await response.json();
 
       const authors = data.map(({author}) => ({
         avatarUrl: author.avatar_url,
